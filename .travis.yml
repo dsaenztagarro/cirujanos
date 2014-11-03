@@ -4,12 +4,12 @@ python:
 env:
   - DJANGO=1.6 DB=mysql
 install:
-  - pip install -q Django==$DJANGO --use-mirrors
-  - pip install -q . --use-mirrors
-  - pip install -q -r requirements.txt --use-mirrors
+  - pip install Django==$DJANGO --use-mirrors
+  - pip install .
+  - pip install -r requirements.txt
   - pip install coveralls
 script:
-  coverage run --source='.' python manage.py test cirujanos --liverserver=0.0.0.0:8081
+  coverage run --source='.' python manage.py test cirujanos
   coverage report
 after_success:
   coveralls

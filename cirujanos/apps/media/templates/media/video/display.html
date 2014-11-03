@@ -1,0 +1,20 @@
+{% extends 'layout/application.html' %}
+{% load staticfiles %}
+{% load i18n %}
+{% load media_extras %}
+
+{% block content %}
+  <div id="articles">
+      <div class="container">
+          <div class="section_header">
+            <h3>{% trans "video details" %}</h3>
+          </div>
+
+          <h3>{{ video.title }}</h3>
+
+          <iframe width="850" height="478" src="{{ video.url }}" frameborder="0" allowfullscreen></iframe>
+
+          <a href="{% url 'media:videos' %}" class="btn btn-large btn-primary">{% trans "back to videos" %}</a>
+      </div>
+  </div>
+{% endblock %}

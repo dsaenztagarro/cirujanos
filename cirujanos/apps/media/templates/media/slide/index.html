@@ -1,0 +1,28 @@
+{% extends 'layout/application.html' %}
+{% load staticfiles %}
+{% load i18n %}
+{% load media_extras %}
+
+{% block content %}
+  <div class="container">
+    <div class="section_header">
+      <h3>{% trans "slides" %}</h3>
+    </div>
+
+    {% if slide_list %}
+      {% for slide in slide_list %}
+        {% if forloop.counter0|divisibleby:2 %}
+          <div class="row">
+        {% endif %}
+        {% slide_record slide %}
+        {% if not forloop.counter0|divisibleby:2 or forloop.last %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      <center>
+        <h4>{% trans "slides empty collection" %}</h4>
+      </center>
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% load static %}
+<div class="span6 photo">
+  <img class="img-rounded" src="{% static doctor.image_path %}"
+    alt="{{ doctor.full_name }}" />
+  <a href="{% url 'about:doctor' doctor.code %}" class="mask">
+    <h3>{{ doctor.full_name }}</h3>
+    <small>{{ doctor.job }}</small>
+    <div class="more">+</div>
+  </a>
+</div>

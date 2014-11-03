@@ -1,0 +1,40 @@
+{% extends 'layout/application.html' %}
+{% load staticfiles %}
+{% load i18n %}
+{% load media_extras %}
+
+{% block content %}
+  <div class="container">
+    <div class="section_header">
+      <h3>{% trans "videos" %}</h3>
+    </div>
+
+    {% if year_list %}
+      {% for year in year_list %}
+        {% if forloop.first %}
+          <ul id="years">
+        {% else %}
+          <li class="separator">/</li>
+        {% endif %}
+
+        <a href="{% url 'media:video' year %}">{{year}}</a>
+      {% endfor %}
+    {% endif %}
+
+    {% if video_list %}
+      {% for video in video_list %}
+        {% if forloop.counter0|divisibleby:2 %}
+          <div class="row">
+        {% endif %}
+        {% video_record video %}
+        {% if not forloop.counter0|divisibleby:2 or forloop.last %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      <center>
+        <h4>{% trans "videos empty collection" %}</h4>
+      </center>
+    {% endif %}
+  </div>
+{% endblock %}

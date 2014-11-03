@@ -1,0 +1,20 @@
+{% load static %}
+<div class="row perk">
+  <div class="col-sm-2 circle doctorcontent-icon">
+    <img src="{% static doctorcontent.image_path %}" alt=""
+    width="100px" height="100px">
+  </div>
+  <div id="{{ doctorcontent.section_id }}" class="col-sm-10 description_wrapper">
+    <h5>{{ title }}</h5>
+    {{ doctorcontent.content_preview|safe }}
+    {% if doctorcontent.has_content_details %}
+      <div class="section-details hidden">
+        {{ doctorcontent.content_details|safe }}
+      </div>
+      <button type="button" class="btn btn-primary btn-read-more pull-right js-toggle">
+        Leer más</button>
+      <button type="button" class="btn btn-primary btn-hide pull-right hidden js-toggle">
+        Ocultar</button>
+    {% endif %}
+  </div>
+</div>

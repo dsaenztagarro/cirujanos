@@ -1,0 +1,22 @@
+[
+  {
+    "model": "about.Doctor",
+    "pk": 1,
+    "fields": {
+      "code": "jmborro",
+      "first_name": "Jose María",
+      "last_name": "Borro Mate",
+      "job": "Director del Programa de Transplante Pulmonar de la Comunidad Gallega en Complejo Hospitalario Universitario de A Coruña"
+    }
+  },
+  {
+    "model": "about.Doctor",
+    "pk": 2,
+    "fields": {
+      "code": "epena",
+      "first_name": "Emilio",
+      "last_name": "Pena",
+      "job": "Facultativo especialista en Complejo Universitario de Vigo"
+    }
+  }
+]

@@ -1,0 +1,42 @@
+[
+{
+  "pk": 1, 
+  "model": "web.slider", 
+  "fields": {
+    "content": "<article class=\"slide\" id=\"event\" style=\"background: url('/static/img/backgrounds/mint.jpg') repeat-x top center;\">\r\n  <img class=\"asset left-400 sp600 t170 z3\"\r\n    src=\"/static/img/slides/scene5/event.png\" />\r\n  <div class=\"info\">\r\n    <h2>\r\n      I Jornada de Cirug\u00eda Tor\u00e1cica del Hospital Vithas Nuestra Se\u00f1ora de F\u00e1tima.\r\n    </h2>\r\n    <h3>\r\n      Avances en el Diagn\u00f3stico y Tratamiento del Carcinoma Broncog\u00e9nico.\r\n    </h3>\r\n    <a href=\"{% url 'media:event' %}\">Pulse aqu\u00ed para m\u00e1s informaci\u00f3n</a>\r\n  </div>\r\n</article>", 
+    "enable": false, 
+    "name": "Jornada de Cirug\u00eda Tor\u00e1cica", 
+    "order": 1
+  }
+},
+{
+  "pk": 2, 
+  "model": "web.slider", 
+  "fields": {
+    "content": "<article class=\"slide\" id=\"hospital\" style=\"background: url('/static/img/backgrounds/silver.jpg') repeat-x top center;\">\r\n  <img class=\"asset left-500 sp600 t170 z3\"\r\n    src=\"/static/img/slides/scene6/doctor.png\" />\r\n  <div class=\"info\">\r\n    <h2>\u00bfUna segunda opini\u00f3n? Encuentre la forma de contactar con nosotros.\r\n    </h2>\r\n    <a href=\"/about/index/#where\">\r\n      Pulse aqu\u00ed para m\u00e1s informaci\u00f3n\r\n    </a>\r\n  </div>\r\n</article>", 
+    "enable": true, 
+    "name": "Segunda Opini\u00f3n", 
+    "order": 2
+  }
+},
+{
+  "pk": 3, 
+  "model": "web.slider", 
+  "fields": {
+    "content": "<article class=\"slide\" id=\"article\" style=\"background: url('/static/img/backgrounds/flower.jpg') repeat-x top center;\">\r\n  <img class=\"asset left140 sp600 t170 z1\"\r\n    src=\"/static/img/slides/scene1/pdf_256x256.png\" />\r\n  <div class=\"info\">\r\n    <h2>Consulte nuestras \u00faltimas publicaciones en revistas cient\u00edficas.</h2>\r\n    <a href=\"/media/article\">Pulse aqu\u00ed para m\u00e1s informaci\u00f3n</a>\r\n  </div>\r\n</article>", 
+    "enable": true, 
+    "name": "Publicaciones en revistas cient\u00edficas", 
+    "order": 3
+  }
+},
+{
+  "pk": 4, 
+  "model": "web.slider", 
+  "fields": {
+    "content": "<article class=\"slide\" id=\"video\" style=\"background: url('/static/img/backgrounds/mango.jpg') repeat-x top center;\">\r\n  <div class=\"info\">\r\n    <h2>Observe con todo detalle nuestras intervenciones quir\u00fargicas.</h2>\r\n    <a href=\"/media/video\">Pulse aqu\u00ed para m\u00e1s informaci\u00f3n</a>\r\n  </div>\r\n  <img class=\"asset left-380 sp600 t150 z1\"\r\n    src=\"/static/img/slides/scene2/television_alt.png\" />\r\n</article>", 
+    "enable": true, 
+    "name": "Intervenciones Quir\u00fargicas", 
+    "order": 4
+  }
+}
+]

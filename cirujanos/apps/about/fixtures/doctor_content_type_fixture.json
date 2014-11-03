@@ -1,0 +1,50 @@
+[
+  {
+    "model": "about.DoctorContentType",
+    "pk": 1,
+    "fields": {
+      "code": "biography",
+      "name": "Biografía"
+    }
+  },
+  {
+    "model": "about.DoctorContentType",
+    "pk": 2,
+    "fields": {
+      "code": "chapters",
+      "name": "Capítulos de libros y monografías"
+    }
+  },
+  {
+    "model": "about.DoctorContentType",
+    "pk": 3,
+    "fields": {
+      "code": "signer1",
+      "name": "Publicaciones como primer firmante"
+    }
+  },
+  {
+    "model": "about.DoctorContentType",
+    "pk": 4,
+    "fields": {
+      "code": "signer2",
+      "name": "Publicaciones como segundo firmante"
+    }
+  },
+  {
+    "model": "about.DoctorContentType",
+    "pk": 5,
+    "fields": {
+      "code": "otherpublications",
+      "name": "Otras publicaciones"
+    }
+  },
+  {
+    "model": "about.DoctorContentType",
+    "pk": 6,
+    "fields": {
+      "code": "conferences",
+      "name": "Congresos y ponencias"
+    }
+  }
+]

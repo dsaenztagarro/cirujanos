@@ -1,0 +1,28 @@
+{% extends 'layout/application.html' %}
+{% load staticfiles %}
+{% load about_extras %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/theme/services.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div id="service_2" class="doctorcontent">
+    <div class="container">
+      <div class="section_header">
+        <h3>{{ doctor.full_name }}</h3>
+      </div>
+      {% for doctorcontent in doctorcontent_list %}
+        {% show_doctorcontent doctorcontent %}
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block js %}
+  <script type="text/javascript">
+  var sections = ['monograph', 'publication-1st-signer',
+    'publication-2nd-signer', 'other-publications']
+  </script>
+  <script src="{% static 'js/custom/about_team.js' %}"></script>
+{% endblock %}

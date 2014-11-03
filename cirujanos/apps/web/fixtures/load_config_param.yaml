@@ -1,0 +1,35 @@
+- model: cirujanos_web.doctor
+  pk: 1
+  fields:
+    first_name: José María
+    last_name: Borro Maté
+- model: cirujanos_web.doctor
+  pk: 2
+  fields:
+    first_name: Emilio
+    last_name: Peña González
+
+- model: cirujanos_web.configparam
+  pk: 1
+  fields:
+    param_name: ARTICLE_ACHIEVED_BY_YEAR
+    param_value: F
+    description: Value F (False) to show all articles together, value T (True) to show articles achieved by year
+- model: cirujanos_web.configparam
+  pk: 2
+  fields:
+    param_name: VIDEO_ACHIEVED_BY_YEAR
+    param_value: F
+    description: Value F (False) to show all video files together, value T (True) to show multimedia files achieved by year
+- model: cirujanos_web.configparam
+  pk: 3
+  fields:
+    param_name: EVENT_ACHIEVED_BY_YEAR
+    param_value: F
+    description: Value F (False) to show all event files together, value T (True) to show multimedia files achieved by year
+- model: cirujanos_web.configparam
+  pk: 4
+  fields:
+    param_name: SLIDE_ACHIEVED_BY_YEAR
+    param_value: F
+    description: Value F (False) to show all slide files together, value T (True) to show multimedia files achieved by year

@@ -1,0 +1,103 @@
+{% extends 'layout/application.html' %}
+{% load staticfiles %}
+
+{% block css %}
+<link href="{% static 'css/theme/contact.css' %}" rel="stylesheet">
+<style>
+  #map_canvas {
+    width: 100%;
+    height: 600px;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div id="contact">
+  <div class="container">
+    <div class="section_header">
+      <h3>Contactar</h3>
+    </div>
+    <div class="row contact js-contact-form">
+      <p>
+      Siempre estamos encantados de poder responder a cualquier tipo de consulta. No dudes en ponerte en contacto con nosotros, y tan pronto como nos sea posible trataremos de responderte. Por favor, permítenos al menos un par de días para poder darte respuesta.
+
+      <div id="alert-container"></div>
+      <form action="{% url 'about:contact-us' %}" method="post" enctype="application/x-www-form-urlencoded">
+        {% csrf_token %}
+        <div class="row form">
+          <div class="col-sm-6 row-col">
+            <div class="box">
+              <div class="form-group">
+                <input class="name form-control" type="text" id="contact-name" name="name" placeholder="Nombre">
+              </div>
+              <div class="form-group">
+                <input class="mail form-control" type="text" id="contact-email" name="email" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <input class="phone form-control" type="text" id="contact-phone" name="phone" placeholder="Teléfono">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="box">
+              <textarea placeholder="Escriba aquí su mensaje..." class="form-control" id="contact-message" name="message"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="row submit">
+          <div class="col-md-5 box">
+            <label class="checkbox">
+              <input type="checkbox"> Subscribirse a nuestro boletín
+            </label>
+          </div>
+          <div class="col-md-3 right">
+            <input type="submit" id='button-submit' value="Enviar mensaje">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="map">
+    <div class="container">
+      <div class="box_wrapp">
+        <div class="box_cont">
+          <div class="head">
+            <h6>¿Dónde encontrarnos?</h6>
+          </div>
+          <ul class="street">
+            <li><strong>Hospital Nuestra Señora de F&aacute;tima</strong></li>
+            <li>V&iacute;a Norte, 48 Pontevedra Spain</li>
+            <!--
+            <li>Zip Code, TX 76006.</li>
+            <li class="icon icontop">
+            <span class="contacticos ico1"></span>
+            <span class="text">1 817 274 2933</span>
+            </li>
+            <li class="icon">
+            <span class="contacticos ico2"></span>
+            <a class="text" href="#">bootstrap@twitter.com</a>
+            </li>
+            -->
+          </ul>
+
+          <div class="head headbottom">
+            <h6>Contactar</h6>
+          </div>
+          <p>Para ponerte en contacto con nosotros no tienes mas que rellenar
+          el formulario en la parte superior de esta p&aacute;gina</p>
+          <!--
+          <a href="/about/contact" class="btn">Contactar</a>
+          -->
+        </div>
+      </div>
+    </div>
+    <div id="map_canvas"></div>
+    <!--
+    <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5908.469092136903!2d-8.7076315577339!3d42.23080190696329!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2f6263e3daded5%3A0xf76b1903627c2638!2sHospital+Nuestra+Se%C3%B1ora+de+Fatima!5e0!3m2!1ses!2ses!4v1413493324757" width="800" height="600" frameborder="0" style="border:0"></iframe>
+    -->
+  </div>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+{% endblock %}

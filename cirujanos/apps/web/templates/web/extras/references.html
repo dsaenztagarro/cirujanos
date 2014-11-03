@@ -1,0 +1,25 @@
+{% load media_extras %}
+
+{% if articles or videos %}
+
+  <h3>Referencias</h3>
+
+  {% if articles %}
+
+    <h4>Art&iacute;culos</h3>
+    {% for record in articles %}
+      {% article_record record.article order=record.order %}
+    {% endfor %}
+
+  {% endif %}
+
+  {% if videos %}
+
+    <h4>V&iacute;deos</h3>
+    {% for record in videos %}
+      {% video_record record.video order=record.order %}
+    {% endfor %}
+
+  {% endif %}
+
+{% endif %}

@@ -1,0 +1,22 @@
+[
+  {
+      "pk": 1,
+      "model": "about.doctor",
+      "fields": {
+          "last_name": "Borro Mate",
+          "first_name": "Jose Mar\u00eda",
+          "code": "jmborro",
+          "job": "Director del Programa de Transplante Pulmonar de la Comunidad Gallega en Complejo Hospitalario Universitario de A Coru\u00f1a"
+      }
+  },
+  {
+      "pk": 2,
+      "model": "about.doctor",
+      "fields": {
+          "last_name": "Pena",
+          "first_name": "Emilio",
+          "code": "epena",
+          "job": "Facultativo especialista en Complejo Universitario de Vigo"
+      }
+  }
+]

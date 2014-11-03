@@ -1,0 +1,40 @@
+{% extends 'layout/application.html' %}
+{% load staticfiles %}
+{% load i18n %}
+{% load media_extras %}
+
+{% block content %}
+  <div class="container">
+    <div class="section_header">
+      <h3>{% trans "articles" %}</h3>
+    </div>
+
+    {% if year_list %}
+      {% for year in year_list %}
+        {% if forloop.first %}
+          <ul id="years">
+        {% else %}
+          <li class="separator">/</li>
+        {% endif %}
+
+        <a href="{% url 'cirujanos:articles' year %}">{{year}}</a>
+      {% endfor %}
+    {% endif %}
+
+    {% if article_list %}
+      {% for article in article_list %}
+        {% if forloop.counter0|divisibleby:2 %}
+          <div class="row">
+        {% endif %}
+        {% article_record article %}
+        {% if not forloop.counter0|divisibleby:2 or forloop.last %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      <center>
+        <h4>{% trans "articles empty collection" %}</h4>
+      </center>
+    {% endif %}
+  </div>
+{% endblock %}

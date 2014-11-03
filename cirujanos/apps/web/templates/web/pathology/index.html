@@ -1,0 +1,30 @@
+{% extends 'layout/application.html' %}
+{% load staticfiles %}
+{% load web_extras %}
+{% load media_extras %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="list-group top-nav">
+        {% for pathology in pathology_list %}
+        <a class="list-group-item {% if pathology.id == pathology_detail.id %}active{% endif %}" href="{{ pathology.get_absolute_url }}">
+          {{ pathology.name }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <section>
+        <div class="page-header">
+          <h1>{{ pathology_detail.name }}</h1>
+        </div>
+        {{ pathology_detail.content|safe }}
+
+        {% references 'pathology' %}
+      </section>
+    </div>
+  </div>
+</div>
+{% endblock %}

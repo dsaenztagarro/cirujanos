@@ -1,0 +1,89 @@
+# -*- coding: utf-8 -*-
+# Spanish Media Translations
+# Copyright (C) 2014
+# This file is distributed under the same license as the PACKAGE package.
+# David Saenz Tagarro <david.saenz.tagarro@gmail.com>, 2014.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-17 17:18+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: David Saenz Tagarro <david.saenz.tagarro@gmail.com>\n"
+"Language-Team: Spanish <LL@li.org>\n"
+"Language: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "media"
+msgstr "Multimedia"
+
+msgid "article"
+msgstr "Artículo"
+
+msgid "articles"
+msgstr "Artículos"
+
+msgid "video"
+msgstr "Vídeo"
+
+msgid "videos"
+msgstr "Vídeos"
+
+msgid "event"
+msgstr "Evento"
+
+msgid "events"
+msgstr "Eventos"
+
+msgid "slide"
+msgstr "Presentación"
+
+msgid "slides"
+msgstr "Presentaciones"
+
+msgid "media index title"
+msgstr "Contenido media"
+
+msgid "articles watch collection"
+msgstr "Pulse para ver nuestras últimas publicaciones en revistas científicas"
+
+msgid "articles empty collection"
+msgstr "En estos momentos no hay artículos disponibles, disculpen las molestias"
+
+msgid "videos watch collection"
+msgstr "Pulse para ver nuestra colección de videos"
+
+msgid "videos empty collection"
+msgstr "En estos momentos no hay vídeos disponibles, disculpen las molestias"
+
+msgid "events watch collection"
+msgstr "Pulse para tener acceso al programa de diferentes congresos"
+
+msgid "events empty collection"
+msgstr "En estos momentos no hay eventos disponibles, disculpen las molestias"
+
+msgid "slides watch collection"
+msgstr "Pulse para ver una selección de nuestras presentaciones"
+
+msgid "slides empty collection"
+msgstr "En estos momentos no hay presentaciones disponibles, disculpen las molestias"
+
+msgid "videos of interest"
+msgstr "Vídeos de interés"
+
+msgid "watch online"
+msgstr "Ver online"
+
+msgid "play"
+msgstr "Reproducir"
+
+msgid "video details"
+msgstr "Detalles de vídeo"
+
+msgid "back to videos"
+msgstr "Volver a la lista de vídeos"
+

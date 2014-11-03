@@ -1,0 +1,19 @@
+{% load staticfiles %}
+{% load i18n %}
+
+<div class="row media-box block" id="video_{{ video.id }}">
+  <div class="box">
+    <img src="{% static 'img/media/video_64x64.png' %}" />
+  </div>
+  <div class="text">
+    <h6>
+      {% if order %}<strong>{{ order }}.</strong>{% endif %}
+      <span>{{ video.title }}</span>
+    </h6>
+    <p>{{ video.author }}</p>
+    <p>{{ video.description }}</p>
+    <a class="btn btn-primary"
+      href="{% url 'media:video-display' video.id %}"
+      >{% trans "play" %}</a>
+  </div>
+</div>

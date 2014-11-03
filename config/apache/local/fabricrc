@@ -1,0 +1,5 @@
+project_name=cirujanos
+release_path=/home/vagrant/Development/projects/cirujanos
+www_path=/var/www/cirujanos
+home_path=/home/vagrant
+env_root=/var/www/cirujanos/env

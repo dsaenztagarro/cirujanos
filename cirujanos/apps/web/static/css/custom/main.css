@@ -1,0 +1,140 @@
+.slide#event .info {
+  display: block;
+  position: absolute;
+  top: 155px;
+  right: 18%;
+  width: 40%;
+}
+
+.slide#event .info h2 {
+  font-color: #000;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.slide#event .info h3 {
+  font-color: #000;
+  color: #000;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.slide#event .info a {
+  color: #fff;
+  font-weight: bold;
+  background-color: #2a205d;
+  padding: 13px 30px;
+  font-size: 19px;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+  -webkit-transition: opacity .1s linear;
+  -moz-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+
+.slide#event .info a:hover { }
+
+
+.slide#hospital .info {
+  display: block;
+  position: absolute;
+  top: 155px;
+  right: 13%;
+  width: 40%;
+}
+
+.slide#hospital .info h2 {
+  font-color: #000;
+  color: #000;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.slide#hospital .info h3 {
+  font-color: #000;
+  color: #000;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.slide#hospital .info a {
+  color: #fff;
+  font-weight: bold;
+  background-color: #247469;
+  padding: 13px 30px;
+  font-size: 19px;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+  -webkit-transition: opacity .1s linear;
+  -moz-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+
+.slide#hospital .info a:hover { }
+
+
+.slide#article .info {
+    position: absolute;
+    top: 150px;
+    left: 20%;
+    width: 40%;
+    display: none;
+    z-index: 10;
+}
+
+.slide#article .info h2 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: normal;
+    line-height: 56px;
+    text-shadow: 1px 1px 1px rgb(49, 57, 61);
+}
+
+.slide#article .info a {
+  color: #fff;
+  font-weight: bold;
+  background-color: #500c16;
+  padding: 13px 30px;
+  font-size: 19px;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+  -webkit-transition: opacity .1s linear;
+  -moz-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+
+
+.slide#video .info {
+  display: block;
+  position: absolute;
+  top: 165px;
+  right: 18%;
+  width: 40%;
+}
+
+.slide#video .info h2 {
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgb(49, 57, 61);
+}
+
+.slide#video .info a {
+  color: #fff;
+  font-weight: bold;
+  background-color: #c1021d;
+  padding: 13px 30px;
+  font-size: 19px;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+  -webkit-transition: opacity .1s linear;
+  -moz-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+
+.slide#video .info a:hover { }

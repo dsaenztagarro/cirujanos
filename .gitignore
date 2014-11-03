@@ -1,0 +1,12 @@
+syntax:glob
+node_modules/
+*.pyc
+*.mo
+*.ropeproject/
+.DS_Store
+.vagrant
+^tags$
+CACHE
+env/
+static_media/
+cirujanos/static/js/bower/*

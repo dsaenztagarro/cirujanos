@@ -1,0 +1,14 @@
+Notificación de solicitud de contacto
+=====================================
+
+Información de contacto
+-----------------------
+
+Nombre: {{ name }}
+Teléfono: {{ phone }}
+Correo electrónico: {{ email }}
+
+Mensaje
+-------
+
+{{ message }}

@@ -1,0 +1,210 @@
+.top-nav { margin-top: 20px }
+
+.page-header { margin: 0px 0px 20px !important; }
+
+/* Navbar */
+
+.navbar .menu {
+  text-transform: uppercase;
+}
+
+/* Home page */
+
+.slide#event .info {
+  display: block;
+  position: absolute;
+  top: 155px;
+  right: 18%;
+  width: 40%;
+}
+
+.slide#event .info h2 {
+  font-color: #000;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.slide#event .info h3 {
+  font-color: #000;
+  color: #000;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.slide#event .info a {
+  color: #fff;
+  font-weight: bold;
+  background-color: #2a205d;
+  padding: 13px 30px;
+  font-size: 19px;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+  -webkit-transition: opacity .1s linear;
+  -moz-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+
+.slide#event .info a:hover { }
+
+
+.slide#hospital .info {
+  display: block;
+  position: absolute;
+  top: 155px;
+  right: 13%;
+  width: 40%;
+}
+
+.slide#hospital .info h2 {
+  font-color: #000;
+  color: #000;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.slide#hospital .info h3 {
+  font-color: #000;
+  color: #000;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.slide#hospital .info a {
+  color: #fff;
+  font-weight: bold;
+  background-color: #247469;
+  padding: 13px 30px;
+  font-size: 19px;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+  -webkit-transition: opacity .1s linear;
+  -moz-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+
+.slide#hospital .info a:hover { }
+
+
+.slide#article .info {
+    position: absolute;
+    top: 150px;
+    left: 20%;
+    width: 40%;
+    display: none;
+    z-index: 10;
+}
+
+.slide#article .info h2 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: normal;
+    line-height: 56px;
+    text-shadow: 1px 1px 1px rgb(49, 57, 61);
+}
+
+.slide#article .info a {
+  color: #fff;
+  font-weight: bold;
+  background-color: #500c16;
+  padding: 13px 30px;
+  font-size: 19px;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+  -webkit-transition: opacity .1s linear;
+  -moz-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+
+
+.slide#video .info {
+  display: block;
+  position: absolute;
+  top: 165px;
+  right: 18%;
+  width: 40%;
+}
+
+.slide#video .info h2 {
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgb(49, 57, 61);
+}
+
+.slide#video .info a {
+  color: #fff;
+  font-weight: bold;
+  background-color: #c1021d;
+  padding: 13px 30px;
+  font-size: 19px;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+  -webkit-transition: opacity .1s linear;
+  -moz-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+
+.slide#video .info a:hover { }
+
+/* About pages */
+#service_2 .circle.doctorcontent-icon img {
+  margin-top: 20px;
+}
+
+/* Media pages */
+.media-box {
+  margin-bottom: 30px;
+  margin-left: 0px;
+}
+.media-box .box {
+  text-align: center;
+  float: left;
+  width: 16%;
+  height: 77px;
+}
+.media-box .box img {
+  margin-top: 18px;
+}
+.media-box .text {
+  float: left;
+  width: 76%;
+  margin-top: 17px;
+  margin-left: 23px;
+}
+.media-box h6 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+}
+
+#faq-responses {
+  list-style-type: none;
+}
+
+/* To hide google map in mobile devices */
+@media (max-width: 767px) {
+  #contact .map #map_canvas {
+    display: none;
+  }
+}
+
+/* To show contact layer over google map */
+#contact .map .box_wrapp {
+  z-index: 1000;
+}
+
+/* Google map closer to contact form */
+#contact .contact {
+  margin: 40px 0 40px 0;
+}
+
+/* To show header of first home post in mobile devices */
+@media (max-width: 767px) {
+  #blog {
+    margin-top: 150px;
+  }
+}

@@ -1,0 +1,38 @@
+{% extends 'layout/application.html' %}
+
+{% load staticfiles %}
+
+{% block header %}
+{% include 'layout/header.html' with fixed_top="true" transparent="true" %}
+{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/theme/features.css' %}">
+  <link rel="stylesheet" href="{% static 'css/theme/index.css' %}" type="text/css"
+    media="screen" />
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{% static 'css/theme/blog.css' %}" type="text/css"
+    media="screen" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}" media="screen" />
+{% endblock %}
+
+{% block content %}
+<div id="blog">
+  <div class="container">
+    <!-- Post Row -->
+    <div class="row post_row">
+      <div class="span4 post">
+        <div class="img">
+          <a href="{% url 'media:index' %}#what-we-do">
+            <img src="{% static 'img/error/control_panel.png' %}" alt="">
+          </a>
+        </div>
+        <div class="text">
+          <h2>404</h2>
+          <p>Esta no es la página web que usted está buscando.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

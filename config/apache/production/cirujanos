@@ -1,0 +1,30 @@
+# vim: set filetype=apache:
+<VirtualHost *:80>
+    ServerName cirujanostoracicos.es
+    ServerAlias www.cirujanostoracicos.es
+    WSGIDaemonProcess cirujanostoracicos.es
+    WSGIProcessGroup cirujanostoracicos.es
+    WSGIScriptAlias / "/var/www/cirujanos/cirujanos.wsgi"
+    Alias /static /var/www/cirujanos/static/
+    <Directory /var/www/cirujanos/static/>
+      Options FollowSymLinks
+      AllowOverride None
+      Order Allow,Deny
+      Allow from all
+    </Directory>
+    <Directory />
+      Options FollowSymLinks
+      AllowOverride None
+      Order Allow,Deny
+      Allow from all
+    </Directory>
+    <Directory /var/www/cirujanos/>
+      Options FollowSymLinks
+      AllowOverride None
+      Order Allow,Deny
+      Allow from all
+    </Directory>
+    XSendFile on
+    ErrorLog "/var/log/apache2/cirujanos_error.log"
+    CustomLog "/var/log/apache2/cirujanos_access.log" common
+</VirtualHost>

@@ -1,0 +1,35 @@
+{% load staticfiles %}
+{% load compress %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'js/bower/mocha/mocha.css' %}">
+
+    {% compress js %}
+    {% include 'js_libraries.html' %}
+    {% endcompress %}
+
+    <!-- Javascript Test Libraries -->
+    <script src="{% static 'js/bower/mocha/mocha.js' %}"></script>
+    <script src="{% static 'js/bower/chai/chai.js' %}"></script>
+    <script src="{% static 'js/bower/sinon/index.js' %}"></script>
+
+    <!-- Test Setup -->
+    <script src="{% static 'js/test/mocha_setup.js' %}"></script>
+    <script src="{% static 'js/test/helpers.js' %}"></script>
+
+    <!-- Tests -->
+    <script src="{% static 'js/about/test/views/contact_view_spec.js' %}"></script>
+    <script src="{% static 'js/about/test/views/contact_modal_view_spec.js' %}"></script>
+    <script src="{% static 'js/about/test/views/contact_form_view_spec.js' %}"></script>
+    <script src="{% static 'js/about/test/models/contact_model_spec.js' %}"></script>
+  </head>
+  <body>
+    <div id="mocha"></div>
+
+    <!-- Test Fixtures -->
+    <div id="fixtures" style="display: none; visibility: hidden;"></div>
+  </body>
+</html>

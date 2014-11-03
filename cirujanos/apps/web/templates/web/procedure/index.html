@@ -1,0 +1,30 @@
+{% extends 'layout/application.html' %}
+{% load staticfiles %}
+{% load web_extras %}
+{% load media_extras %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="list-group top-nav">
+        {% for procedure in procedure_list %}
+        <a class="list-group-item {% if procedure.id == procedure_detail.id %}active{% endif %}" href="{{ procedure.get_absolute_url }}">
+          {{ procedure.name }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <section>
+        <div class="page-header">
+          <h1>{{ procedure_detail.name }}</h1>
+        </div>
+        {{ procedure_detail.content|safe }}
+
+        {% references 'procedure' %}
+      </section>
+    </div>
+  </div>
+</div>
+{% endblock %}

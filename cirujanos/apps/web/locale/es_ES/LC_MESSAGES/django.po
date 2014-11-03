@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+# Spanish Web Translations
+# Copyright (C) 2014
+# This file is distributed under the same license as the PACKAGE package.
+# David Saenz Tagarro <david.saenz.tagarro@gmail.com>, 2014.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-07 20:07+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: David Saenz Tagarro <david.saenz.tagarro@gmail.com>\n"
+"Language-Team: Spanish <LL@li.org>\n"
+"Language: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+msgid "pathology"
+msgstr "Patologia"
+
+msgid "pathologies"
+msgstr "Patologías"
+
+msgid "procedure"
+msgstr "Procedimiento"
+
+msgid "procedures"
+msgstr "Procedimientos"
+
+msgid "slide"
+msgstr "Portada"
+
+msgid "slides"
+msgstr "Portadas"

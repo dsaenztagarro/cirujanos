@@ -1,0 +1,54 @@
+{% extends 'layout/application.html' %}
+{% load staticfiles %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/theme/index.css' %}" type="text/css" media="screen" />
+  <link rel="stylesheet" href="{% static 'css/theme/blog.css' %}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block content %}
+
+  <section id="feature_slider" class="">
+    {% for slider in slider_list %}
+      {{ slider.content|safe }}
+    {% endfor %}
+  </section>
+
+  <div id="blog">
+    <div class="container">
+      <div class="row post_row">
+        {% for post in post_list %}
+          <div class="col-sm-4">
+            {% cycle 'post' 'post' 'post last' as post_class silent %}
+            <div class="{{ post_class }}">
+              <div class="img">
+                <a href="{{ post.link }}">
+                  {% if post.is_system %}
+                  <img src="{{ post.system_image_path }}" alt="" class="img-responsive">
+                  {% endif %}
+                </a>
+              </div>
+              <div class="text">
+                <h5><a href="{{ post.link }}">{{ post.title }}</a></h5>
+                <span class="date">Wed, 12 Dec.</span>
+                <p>{{ post.description }}</p>
+              </div>
+              <div class="author_box">
+                <h6>Unidad Especializada</h6>
+                <p>Cirugía Torácia</p>
+              </div>
+              <a class="plus_wrapper" href="{{ post.link }}">
+                <span>&#43;</span>
+              </a>
+            </div>
+          </div>
+          {% if forloop.counter|divisibleby:3 %}
+          </div>
+          <div class="clearfix"></div>
+          <div class="row post_row">
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

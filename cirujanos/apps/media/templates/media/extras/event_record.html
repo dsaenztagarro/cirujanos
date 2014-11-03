@@ -1,0 +1,19 @@
+{% load staticfiles %}
+{% load i18n %}
+
+<div class="row media-box block" id="event_{{ event.id }}">
+  <div class="box">
+    <img src="{% static 'img/media/event_64x64.png' %}" />
+  </div>
+  <div class="text">
+    <h6>
+      {% if order %}<strong>{{ order }}.</strong>{% endif %}
+      <span>{{ event.title }}</span>
+    </h6>
+    <p>{{ event.author }}</p>
+    <p>{{ event.description }}</p>
+    <a class="btn btn-primary" target="_blank"
+      href="{% url 'media:browser' event.file.name %}"
+      >{% trans "watch online" %}</a>
+  </div>
+</div>

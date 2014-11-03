@@ -1,0 +1,56 @@
+{% load i18n %}
+
+{% if active_menu == "home" %}
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+{% else %}
+<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+{% endif %}
+
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="{% url 'home:index' %}" class="navbar-brand">Unidad Especializada<br><strong>Cirugía Torácica</strong></a>
+    </div>
+    <div class="navbar-collapse navbar-ex1-collapse collapse" role="navigation" style="height: auto">
+    {% if not menus_hidden %}
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'home:index' %}">INICIO</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle"
+            data-toggle="dropdown">SOBRE NOSOTROS<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url 'about:index' %}">Quienes somos</a></li>
+            <li><a href="{% url 'about:contact-us' %}">Contactar</a></li>
+          </ul>
+        </li>
+        <li class="dropdown js-pathology-nav">
+          <a href="#" class="dropdown-toggle menu" data-toggle="dropdown">{% trans "pathologies" %}<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            {% for pathology in pathology_list %}
+            <li>
+              <a href="{{ pathology.get_absolute_url }}">{{ pathology.name }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle menu" data-toggle="dropdown">{% trans "procedures" %}<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            {% for procedure in procedure_list %}
+            <li>
+              <a href="{{ procedure.get_absolute_url }}">{{ procedure.name }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li><a class="menu" href="{% url 'media:index' %}">{% trans "media" %}</a></li>
+      </ul>
+    {% endif %}
+    </div>
+  </div>
+</div>

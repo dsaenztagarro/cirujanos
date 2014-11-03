@@ -1,0 +1,74 @@
+{% extends 'layout/application.html' %}
+{% load staticfiles %}
+{% load about_extras %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/lib/isotope.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/lib/animate.css' %}" media="screen, projection">
+<link rel="stylesheet" type="text/css" href="{% static 'css/theme/contact.css' %}" media="screen" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/theme/about.css' %}" media="screen">
+{% endblock %}
+
+{% block content %}
+<div id="about">
+  <div class="container">
+    <div id="who">
+      <div class="section_header">
+        <h3>¿Quiénes somos?</h3>
+      </div>
+      <div class="row">
+        <center>
+          <p>Haz click sobre sobre nuestra imagen para conocernos</p>
+        </center>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <div id="gallery_container">
+            {% for doctor in doctor_list %}
+              {% show_doctor doctor %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div id="what">
+      <div class="section_header">
+        <h3>¿A qué nos dedicamos?</h3>
+      </div>
+      <div class="row">
+
+        <p>La Cirugía Torácica constituye una especialidad médico quirúrgica
+        dedicada al estudio y tratamiento de los procesos que afectan al tórax
+        tanto a su continente como a su contenido, es decir, pared torácica,
+        pleura, pulmón, mediastino, árbol traqueo-bronquial, esófago y
+        diafragma.</p><br>
+
+        <p>Las enfermedades que afectan al tórax pueden ser de tipo congénito,
+        traumático, inflamatorio o tumoral.</p><br>
+
+        <p>Por otro lado, hay que considerar tambien la patología de órganos
+        situados en regiones limítrofes y cuyo compromiso patológico se
+        traduce en repercusión torácica, tales como las afecciones cervicales
+        y subdiafragmáticas.</p><br>
+
+        <p>El avance continuo de los métodos diagnósticos, la mejor preparación
+        preoperatoria y el desarrollo de técnicas anestésicas y quirúrgicas  ha
+        ampliado enormemente el campo de acción de la Cirugía Torácica y
+        mejorado sus resultados.</p><br>
+
+      </div>
+    </div>
+    <!--
+      <button class="btn btn-primary btn-large" id="contact-show-form">
+        Contactar
+      </button>
+    -->
+  </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/vendor/jquery.isotope.min.js' %}"></script>
+<script src="{% static 'js/custom/about.js' %}"></script>
+{% endblock %}

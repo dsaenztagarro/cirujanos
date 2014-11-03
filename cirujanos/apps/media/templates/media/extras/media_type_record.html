@@ -1,0 +1,18 @@
+{% load static %}
+<div class="col-sm-4">
+  <div class="feature">
+    <div class="img">
+      <a href="{% url media.url_path %}">
+        <img src="{% static media.image_path %}" />
+      </a>
+    </div>
+    <div class="text">
+      <h6>
+        <a href="{% url media.url_path %}" id="{{media_type}}_title">
+          <span>{{ media.title }}</span>
+        </a>
+      </h6>
+      <p>{{ media.description }}</p>
+    </div>
+  </div>
+</div>

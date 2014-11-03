@@ -1,0 +1,147 @@
+[
+{
+  "pk": 1,
+  "model": "home.slider",
+  "fields": {
+    "content": "<article class=\"slide\" id=\"event\" style=\"background: url('/static/img/backgrounds/mint.jpg') repeat-x top center;\">\r\n  <img class=\"asset left-400 sp600 t170 z3\"\r\n    src=\"/static/img/slides/scene5/event.png\" />\r\n  <div class=\"info\">\r\n    <h2>\r\n      I Jornada de Cirug\u00eda Tor\u00e1cica del Hospital Vithas Nuestra Se\u00f1ora de F\u00e1tima.\r\n    </h2>\r\n    <h3>\r\n      Avances en el Diagn\u00f3stico y Tratamiento del Carcinoma Broncog\u00e9nico.\r\n    </h3>\r\n    <a href=\"{% url 'media:event' %}\">Pulse aqu\u00ed para m\u00e1s informaci\u00f3n</a>\r\n  </div>\r\n</article>",
+    "enable": false,
+    "name": "Jornada de Cirug\u00eda Tor\u00e1cica",
+    "order": 1
+  }
+},
+{
+  "pk": 2,
+  "model": "home.slider",
+  "fields": {
+    "content": "<article class=\"slide\" id=\"hospital\" style=\"background: url('/static/img/backgrounds/silver.jpg') repeat-x top center;\">\r\n  <img class=\"asset left-500 sp600 t170 z3\"\r\n    src=\"/static/img/slides/scene6/doctor.png\" />\r\n  <div class=\"info\">\r\n    <h2>\u00bfUna segunda opini\u00f3n? Encuentre la forma de contactar con nosotros.\r\n    </h2>\r\n    <a href=\"/about/index/#where\">\r\n      Pulse aqu\u00ed para m\u00e1s informaci\u00f3n\r\n    </a>\r\n  </div>\r\n</article>",
+    "enable": true,
+    "name": "Segunda Opini\u00f3n",
+    "order": 2
+  }
+},
+{
+  "pk": 3,
+  "model": "home.slider",
+  "fields": {
+    "content": "<article class=\"slide\" id=\"article\" style=\"background: url('/static/img/backgrounds/flower.jpg') repeat-x top center;\">\r\n  <img class=\"asset left140 sp600 t170 z1\"\r\n    src=\"/static/img/slides/scene1/pdf_256x256.png\" />\r\n  <div class=\"info\">\r\n    <h2>Consulte nuestras \u00faltimas publicaciones en revistas cient\u00edficas.</h2>\r\n    <a href=\"/media/article\">Pulse aqu\u00ed para m\u00e1s informaci\u00f3n</a>\r\n  </div>\r\n</article>",
+    "enable": true,
+    "name": "Publicaciones en revistas cient\u00edficas",
+    "order": 3
+  }
+},
+{
+  "pk": 4,
+  "model": "home.slider",
+  "fields": {
+    "content": "<article class=\"slide\" id=\"video\" style=\"background: url('/static/img/backgrounds/mango.jpg') repeat-x top center;\">\r\n  <div class=\"info\">\r\n    <h2>Observe con todo detalle nuestras intervenciones quir\u00fargicas.</h2>\r\n    <a href=\"/media/video\">Pulse aqu\u00ed para m\u00e1s informaci\u00f3n</a>\r\n  </div>\r\n  <img class=\"asset left-380 sp600 t150 z1\"\r\n    src=\"/static/img/slides/scene2/television_alt.png\" />\r\n</article>",
+    "enable": true,
+    "name": "Intervenciones Quir\u00fargicas",
+    "order": 4
+  }
+},
+{
+  "pk": 1,
+  "model": "home.post",
+  "fields": {
+    "description": "Continue para conocer los principales procesos que atiende la Cirug\u00eda Tor\u00e1cica.",
+    "title": "\u00bfA qu\u00e9 nos dedicamos?",
+    "image": "/home/vagrant/Development/projects/cirujanos/www/static/images/home/posts/default.jpg",
+    "system_image_path": "/static/img/home/posts/what_we_do.jpg",
+    "is_system": true,
+    "public": true,
+    "publish_date": "2014-10-19",
+    "link": "/about/",
+    "order": 1
+  }
+},
+{
+  "pk": 2,
+  "model": "home.post",
+  "fields": {
+    "description": "La gran especializaci\u00f3n de la medicina hace que en la mayor parte de los casos, los procesos requieran la participaci\u00f3n de diversos especialistas para valoraci\u00f3n, consejo o ayuda diagn\u00f3stico terap\u00e9utica. Colaboramos siempre con especialistas con experiencia contrastada para la resoluci\u00f3n de su problema y le facilitaremos la consecuci\u00f3n de citas.",
+    "title": "Tratamiento multidisciplinar.",
+    "image": "/home/vagrant/Development/projects/cirujanos/www/static/images/home/posts/default.jpg",
+    "system_image_path": "/static/img/home/posts/multidisciplinary_treatment.jpg",
+    "is_system": true,
+    "public": true,
+    "publish_date": "2014-10-19",
+    "link": "#",
+    "order": 2
+  }
+},
+{
+  "pk": 3,
+  "model": "home.post",
+  "fields": {
+    "description": "Nuestra dilatada experiencia en todos los problemas tor\u00e1cicos, estando al d\u00eda en todas las t\u00e9cnicas e innovaciones actuales y valorando siempre la evidencia cient\u00edfica existente, ayuda a que podamos orientar o aconsejar a los pacientes de la manera mas profesional y sin compromiso alguno.",
+    "title": "Segundas opiniones",
+    "image": "/home/vagrant/Development/projects/cirujanos/www/static/images/home/posts/default.jpg",
+    "system_image_path": "/static/img/home/posts/second_opinions.jpg",
+    "is_system": true,
+    "public": true,
+    "publish_date": "2014-10-19",
+    "link": "#",
+    "order": 3
+  }
+},
+{
+  "pk": 4,
+  "model": "home.post",
+  "fields": {
+    "description": "\u00bfQu\u00e9 debo llevar el d\u00eda de mi cirug\u00eda?, \u00bfCu\u00e1nto tiempo durar\u00e1 la operaci\u00f3n?, en esta secci\u00f3n encontrar\u00e1s algunas de las preguntas m\u00e1s frecuentes. Por supuesto, si tienes alguna pregunta que no encuentres en esta secci\u00f3n no dudes en contactarnos.",
+    "title": "Preguntas m\u00e1s frecuentes (FAQ)",
+    "image": "/home/vagrant/Development/projects/cirujanos/www/static/images/home/posts/default.jpg",
+    "system_image_path": "/static/img/home/posts/faq.jpg",
+    "is_system": true,
+    "public": true,
+    "publish_date": "2014-10-19",
+    "link": "/web/procedure/faq",
+    "order": 4
+  }
+},
+{
+  "pk": 5,
+  "model": "home.post",
+  "fields": {
+    "description": "Si usted desea dejar de fumar cuenta de entrada con todo nuestro apoyo, pero adem\u00e1s le ofrecemos una serie de pautas para que cumpla con su objetivo.\r\n",
+    "title": "Dejar de fumar",
+    "image": "/home/vagrant/Development/projects/cirujanos/www/static/images/home/posts/default.jpg",
+    "system_image_path": "/static/img/home/posts/stop_smoking.jpg",
+    "is_system": true,
+    "public": true,
+    "publish_date": "2014-10-19",
+    "link": "/web/procedure/dejar-de-fumar",
+    "order": 5
+  }
+},
+{
+  "pk": 6,
+  "model": "home.post",
+  "fields": {
+    "description": "Neumectom\u00edas, lobectom\u00edas, bilobectom\u00edas, biopsia pulmonar.. desde esta secci\u00f3n usted podr\u00e1 ver detenidamente todo tipo de intervenciones llevadas a cabo por nuestro equipo de cirujanos.",
+    "title": "Videos de Inter\u00e9s",
+    "image": "/home/vagrant/Development/projects/cirujanos/www/static/images/home/posts/default.jpg",
+    "system_image_path": "/static/img/home/posts/videos.jpg",
+    "is_system": true,
+    "public": true,
+    "publish_date": "2014-10-19",
+    "link": "/media/video",
+    "order": 6
+  }
+},
+{
+  "pk": 7,
+  "model": "home.post",
+  "fields": {
+    "description": "De entre todas nuestras publicaciones, esta secci\u00f3n pretende acercarle la documentaci\u00f3n relativa a algunos de nuestros trabajos m\u00e1s relevantes, publicados en revistas cient\u00edficas.",
+    "title": "Art\u00edculos de Inter\u00e9s",
+    "image": "/home/vagrant/Development/projects/cirujanos/www/static/images/home/posts/default.jpg",
+    "system_image_path": "/static/img/home/posts/articles.jpg",
+    "is_system": true,
+    "public": true,
+    "publish_date": "2014-10-19",
+    "link": "/media/articles",
+    "order": 7
+  }
+}
+]

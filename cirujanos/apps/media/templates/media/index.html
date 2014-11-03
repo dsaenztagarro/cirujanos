@@ -1,0 +1,39 @@
+{% extends 'layout/application.html' %}
+{% load staticfiles %}
+{% load i18n %}
+{% load media_extras %}
+
+{% block css %}
+<link href="{% static 'css/theme/features.css' %}" rel="stylesheet">
+<style>
+  p {
+    font-size: 24px;
+    display: inline-block;
+    color: #5b5b5d;
+    font-style: italic;
+    line-height: 26px;
+    margin-bottom: 25px;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div id="features">
+  <div class="container">
+    <div class="section_header">
+      <h3>{% trans "media index title" %}</h3>
+    </div>
+    <div class="feature_wrapper option3">
+      <div class="row">
+        {% media_type_record 'article' %}
+        {% media_type_record 'video' %}
+        {% media_type_record 'event' %}
+      </div>
+      <br>
+      <div class="row">
+        {% media_type_record 'slide' %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

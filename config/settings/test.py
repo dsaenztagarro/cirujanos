@@ -8,7 +8,8 @@ SOUTH_TESTS_MIGRATE = False
 
 # The default gateway when you setup Virtual box is generally 10.0.2.2 as
 # default value.
-SELENIUM_COMMAND_EXECUTOR = "http://10.0.2.2:4444/wd/hub"
+SELENIUM_COMMAND_EXECUTOR = os.environ.get('CIRUJANOS_COMMAND_EXECUTOR',
+                                           'http://10.0.2.2:4444/wd/hub')
 
 LANGUAGE_CODE = 'es-es'
 

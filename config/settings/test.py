@@ -3,7 +3,7 @@ from .base import *
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cirujanos_test',
+        'NAME': 'cirujanos_development',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': '127.0.0.1',

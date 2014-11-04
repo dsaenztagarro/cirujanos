@@ -1,8 +1,8 @@
 from django.utils.translation import ugettext as _
-from cirujanos.tests.support import test_base
+from cirujanos.tests.support.integration import IntegrationTestCase
 
 
-class AboutIndexTest(test_base.IntegrationTestCase):
+class AboutIndexTest(IntegrationTestCase):
 
     def test_send_contact_email(self):
         self.driver.get(self.url_for('about:index'))

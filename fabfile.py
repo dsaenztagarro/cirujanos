@@ -5,7 +5,6 @@ from fabric_utils.utils import remote_shell_vars, pred
 import os
 import sys
 
-# 'cirujanos@cirujanostoracicos.es'
 env.hosts = [os.environ.get('CIRUJANOS_HOST')]
 
 

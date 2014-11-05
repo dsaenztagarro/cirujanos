@@ -18,6 +18,7 @@ class IntegrationTestCase(LiveServerTestCase):
             desired_capabilities=webdriver.DesiredCapabilities.FIREFOX,
             browser_profile=cls.browser_profile(),
         )
+        cls.driver.implicitly_wait(20)
         super(IntegrationTestCase, cls).setUpClass()
 
     @classmethod

@@ -5,12 +5,11 @@ env:
   - DJANGO=1.6 DB=mysql
 install:
   - pip install -q Django==$DJANGO --use-mirrors
-  - pip install -q -r requirements.txt
-  - pip install coveralls
+  - pip install -r requirements-devel.txt --use-mirrors
 before_script:
   - mysql -e 'create database cirujanos_development;'
 script:
-  coverage run --source='.' manage.py test cirujanos
+  coverage run --source='.' --omit='*tests*,*commands*,*migrations*,*admin*,*settings*,*wsgi*' -m manage.py test cirujanos
 after_success:
   coveralls
 addons:

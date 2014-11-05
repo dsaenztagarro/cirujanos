@@ -1,0 +1,13 @@
+-r requirements.txt
+
+factory-boy==2.4.1
+fake-factory==0.4.2
+mock==1.0.1
+py==1.4.24
+pytest==2.6.2
+pytest-django==2.6.2
+pytest-pythonpath==0.3
+selenium==2.43.0
+
+coverage==3.7.1
+coveralls==0.4.4

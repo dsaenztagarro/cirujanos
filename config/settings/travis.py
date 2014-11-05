@@ -1,4 +1,4 @@
 from .testing import *
 
-STATIC_ROOT = '/tmp'
-MEDIA_ROOT = '/tmp'
+STATIC_ROOT = '/tmp/static'
+MEDIA_ROOT = '/tmp/media'

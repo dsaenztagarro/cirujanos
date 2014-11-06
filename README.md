@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/dsaenztagarro/django-cirujanos.svg?branch=master)](https://travis-ci.org/dsaenztagarro/django-cirujanos)
+[![Coverage Status](https://coveralls.io/repos/dsaenztagarro/django-cirujanos/badge.png?branch=master)](https://coveralls.io/r/dsaenztagarro/django-cirujanos?branch=master)
+
 # Tests
 
 ```

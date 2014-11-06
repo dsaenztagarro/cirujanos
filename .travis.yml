@@ -9,7 +9,7 @@ install:
 before_script:
   - mysql -e 'create database cirujanos_development;'
 script:
-  coverage run --source='.' --omit='*tests*,*commands*,*migrations*,*admin*,*settings*,*wsgi*' -m py.test -v --tb=native --settings=config.settings.travis
+  coverage run --source='.' --omit='*tests*,*commands*,*migrations*,*admin*,*settings*,*wsgi*' -m py.test -v --tb=native
 after_success:
   coveralls
 addons:

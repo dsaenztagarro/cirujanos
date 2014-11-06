@@ -13,9 +13,14 @@ class IntegrationTestCase(LiveServerTestCase):
 
     @classmethod
     def setUpClass(cls):
+        cls.caps = webdriver.DesiredCapabilities.FIREFOX
+        cls.caps['tunnel-identifier'] = os.environ['TRAVIS_JOB_NUMBER']
+        cls.caps['build'] = os.environ['TRAVIS_BUILD_NUMBER']
+        cls.caps['tags'] = [os.environ['TRAVIS_PYTHON_VERSION'], 'CI']
+
         cls.driver = webdriver.Remote(
             command_executor=settings.SELENIUM_COMMAND_EXECUTOR,
-            desired_capabilities=webdriver.DesiredCapabilities.FIREFOX,
+            desired_capabilities=cls.caps,
             browser_profile=cls.browser_profile(),
         )
         cls.driver.implicitly_wait(20)

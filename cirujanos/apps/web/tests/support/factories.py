@@ -1,5 +1,6 @@
 import factory
-from ....web.models import Pathology, PathologyArticle, PathologyVideo
+from ....web.models import Pathology, PathologyArticle, PathologyVideo, \
+    Procedure, ProcedureArticle, ProcedureVideo
 from cirujanos.apps.media.tests.support import factories
 
 
@@ -28,3 +29,30 @@ class PathologyFactory(factory.DjangoModelFactory):
             video_list = factories.VideoFactory.create_batch(count)
             for i, video in enumerate(video_list):
                 PathologyVideo.objects.create_and_save(self, video, i)
+
+
+class ProcedureFactory(factory.DjangoModelFactory):
+    class Meta:
+        model = Procedure
+
+    name = factory.Sequence(lambda n: 'Procedure #{0}'.format(n))
+    order = factory.Sequence(lambda n: n)
+    content = factory.Sequence(
+        lambda n: "<p><strong>Content for Procedure #%s</strong></p>" % n)
+
+    @factory.post_generation
+    def references(self, create, extracted, **kwargs):
+        if not create:
+            return
+
+        if 'articles_count' in kwargs:
+            count = kwargs['articles_count']
+            article_list = factories.ArticleFactory.create_batch(count)
+            for i, article in enumerate(article_list):
+                ProcedureArticle.objects.create_and_save(self, article, i)
+
+        if 'videos_count' in kwargs:
+            count = kwargs['videos_count']
+            video_list = factories.VideoFactory.create_batch(count)
+            for i, video in enumerate(video_list):
+                ProcedureVideo.objects.create_and_save(self, video, i)

@@ -7,6 +7,5 @@ node_modules/
 .vagrant
 ^tags$
 CACHE
-env/
 static_media/
 cirujanos/static/js/bower/*

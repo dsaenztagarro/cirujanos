@@ -123,7 +123,7 @@ EXTERNAL_APPS = [
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'django_extensions',
-    'django_nose',
+    # 'django_nose',
     'south',
     'compressor',
     'tinymce',
@@ -223,11 +223,11 @@ CACHES = {
 }
 
 # Use nose to run all tests
-TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+# TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
 # Tell nose to measure coverage on the 'foo' and 'bar' apps
-NOSE_ARGS = [
-        '--with-coverage',
-        '--cover-package=cirujanos,cirujanos.apps.home,cirujanos.apps.media,cirujanos.apps.about,cirujanos.apps.web',
-        '--cover-html',
-]
+# NOSE_ARGS = [
+#         '--with-coverage',
+#         '--cover-package=cirujanos,cirujanos.apps.home,cirujanos.apps.media,cirujanos.apps.about,cirujanos.apps.web',
+#         '--cover-html',
+# ]

@@ -14,9 +14,12 @@ class IntegrationTestCase(LiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         cls.caps = webdriver.DesiredCapabilities.FIREFOX
-        cls.caps['tunnel-identifier'] = os.environ['TRAVIS_JOB_NUMBER']
-        cls.caps['build'] = os.environ['TRAVIS_BUILD_NUMBER']
-        cls.caps['tags'] = [os.environ['TRAVIS_PYTHON_VERSION'], 'CI']
+        try:
+            cls.caps['tunnel-identifier'] = os.environ['TRAVIS_JOB_NUMBER']
+            cls.caps['build'] = os.environ['TRAVIS_BUILD_NUMBER']
+            cls.caps['tags'] = [os.environ['TRAVIS_PYTHON_VERSION'], 'CI']
+        except KeyError:
+            print('INFO: TRAVIS key environment missing')
 
         cls.driver = webdriver.Remote(
             command_executor=settings.SELENIUM_COMMAND_EXECUTOR,

@@ -4,6 +4,7 @@ PASSWORD_HASHERS = (
     'django.contrib.auth.hashers.MD5PasswordHasher',
 )
 
+SKIP_SOUTH_TESTS = True
 SOUTH_TESTS_MIGRATE = False
 
 # The default gateway when you setup Virtual box is generally 10.0.2.2 as

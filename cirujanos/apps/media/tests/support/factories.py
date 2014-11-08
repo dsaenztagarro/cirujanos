@@ -1,5 +1,5 @@
 from django.utils import timezone
-from cirujanos.apps.web import models
+from cirujanos.apps.media import models
 import factory
 import os
 
@@ -29,5 +29,29 @@ class VideoFactory(factory.DjangoModelFactory):
     author = factory.Sequence(lambda n: 'Author #{0}'.format(n))
     description = factory.Sequence(lambda n: 'Description #%s' % n)
     url = 'http://www.youtube.com/embed/e0QF2Ld1skM'
+    publish_date = timezone.now()
+    public = True
+
+
+class EventFactory(factory.DjangoModelFactory):
+    class Meta:
+        model = models.Event
+
+    title = factory.Sequence(lambda n: 'Event #{0}'.format(n))
+    author = factory.Sequence(lambda n: 'Author #{0}'.format(n))
+    description = factory.Sequence(lambda n: 'Description #%s' % n)
+    file = factory.django.FileField(from_path=TEST_ARTICLE_PATH)
+    publish_date = timezone.now()
+    public = True
+
+
+class SlideFactory(factory.DjangoModelFactory):
+    class Meta:
+        model = models.Slide
+
+    title = factory.Sequence(lambda n: 'Slide #{0}'.format(n))
+    author = factory.Sequence(lambda n: 'Author #{0}'.format(n))
+    description = factory.Sequence(lambda n: 'Description #%s' % n)
+    file = factory.django.FileField(from_path=TEST_ARTICLE_PATH)
     publish_date = timezone.now()
     public = True

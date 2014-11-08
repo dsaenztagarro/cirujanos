@@ -4,7 +4,7 @@ from django.template.defaultfilters import slugify
 from django.utils.translation import ugettext_lazy as _
 from tinymce.models import HTMLField
 from managers import MenuManager, PathologyArticleManager, \
-    PathologyVideoManager
+    PathologyVideoManager, ProcedureArticleManager, ProcedureVideoManager
 from cirujanos.apps.media.models import Article, Video
 
 
@@ -101,6 +101,8 @@ class ProcedureArticle(models.Model):
     article = models.ForeignKey(Article)
     order = models.IntegerField(default=0)
 
+    objects = ProcedureArticleManager()
+
     def __unicode__(self):
         return "procedure#%s - article#%s" % \
             (self.procedure.id, self.article.id)
@@ -113,6 +115,8 @@ class ProcedureVideo(models.Model):
     procedure = models.ForeignKey(Procedure)
     video = models.ForeignKey(Video)
     order = models.CharField(default='A', max_length=3)
+
+    objects = ProcedureVideoManager()
 
     def __unicode__(self):
         return "procedure#%s - video#%s" % \

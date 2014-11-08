@@ -1,5 +1,6 @@
 syntax:glob
 node_modules/
+.coverage
 *.pyc
 *.mo
 *.ropeproject/

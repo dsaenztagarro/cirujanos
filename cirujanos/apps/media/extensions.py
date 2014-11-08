@@ -25,6 +25,8 @@ class Publication():
         key = "%s_ACHIEVED_BY_YEAR" % (cls.__name__.upper())
         try:
             configParam = ConfigParam.objects.get(param_name=key)
+            import pdb
+            pdb.set_trace()
             return configParam.param_value == cls.TRUE
         except ConfigParam.DoesNotExist:
             pass

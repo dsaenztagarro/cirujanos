@@ -18,6 +18,8 @@ class MediaGalleryView(AppTemplateView):
         listParamName = "%s_list" % (PublicationModel.__name__.lower(),)
 
         if PublicationModel.isAchievedByYear():
+            import pdb
+            pdb.set_trace()
             date_list = PublicationModel.objects.filter(public=True).dates(
                 'publish_date', 'year')
             year_list = [date.year for date in date_list]

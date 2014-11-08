@@ -29,7 +29,6 @@ class PathologyDetailView(AppDetailView):
             'pathology_detail': self.object,
             'pathology_articles': articles,
             'pathology_videos': videos,
-            'pathology_references': (articles or videos)
         })
         return self.decorate_context(context)
 
@@ -47,10 +46,13 @@ class ProcedureDetailView(AppDetailView):
 
     def get_context_data(self, **kwargs):
         context = super(ProcedureDetailView, self).get_context_data(**kwargs)
-        context['procedure_detail'] = self.object
-        # Media related
-        context['procedure_articles'] = ProcedureArticle.objects. \
+        articles = ProcedureArticle.objects. \
             filter(procedure=self.object).order_by('order')
-        context['procedure_videos'] = ProcedureVideo.objects. \
+        videos = ProcedureVideo.objects. \
             filter(procedure=self.object).order_by('order')
+        context.update({
+            'procedure_detail': self.object,
+            'procedure_articles': articles,
+            'procedure_videos': videos,
+        })
         return self.decorate_context(context)

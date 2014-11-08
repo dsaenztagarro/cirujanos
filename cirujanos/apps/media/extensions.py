@@ -8,7 +8,7 @@ class Publication():
     FALSE = "F"
 
     @classmethod
-    def getMostCurrentYear(cls):
+    def getLastPublicationYear(cls):
         """ Returns the most current year of publication of an article.
         Only articles with status "public" are considered. """
         dictionary_date = cls.objects.filter(public=True).aggregate(
@@ -25,8 +25,6 @@ class Publication():
         key = "%s_ACHIEVED_BY_YEAR" % (cls.__name__.upper())
         try:
             configParam = ConfigParam.objects.get(param_name=key)
-            import pdb
-            pdb.set_trace()
             return configParam.param_value == cls.TRUE
         except ConfigParam.DoesNotExist:
             pass

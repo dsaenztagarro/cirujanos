@@ -16,7 +16,7 @@
         {% else %}
           <li class="separator">/</li>
         {% endif %}
-        <a href="{% url 'cirujanos:articles' year %}">{{year}}</a>
+        <a id="year_{{year}}" href="{% url 'media:articles' year %}">{{year}}</a>
       {% endfor %}
     {% endif %}
 

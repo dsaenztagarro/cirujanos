@@ -18,22 +18,18 @@ class MediaGalleryView(AppTemplateView):
         listParamName = "%s_list" % (PublicationModel.__name__.lower(),)
 
         if PublicationModel.isAchievedByYear():
-            import pdb
-            pdb.set_trace()
             date_list = PublicationModel.objects.filter(public=True).dates(
                 'publish_date', 'year')
             year_list = [date.year for date in date_list]
             context['year_list'] = reversed(year_list)
             context['publish_year'] = context.get(
-                'publish_year', PublicationModel.getMostCurrentYear())
+                'publish_year', PublicationModel.getLastPublicationYear())
             criteria['publish_date__year'] = context['publish_year']
 
         modelList = PublicationModel.objects.filter(**criteria)
         context[listParamName] = modelList
 
-        context = self.decorate_context(context)
-
-        return self.render_to_response(context)
+        return self.render_to_response(self.decorate_context(context))
 
 
 class MediaBrowserView(View):

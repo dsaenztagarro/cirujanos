@@ -1,0 +1,9 @@
+[run]
+omit = *manage*,*fabfile*,*tests*,*commands*,*migrations*,*admin*,*settings*,*wsgi*
+source = .
+
+[report]
+ignore_errors = True
+
+[html]
+directory = coverage_html

@@ -2,7 +2,7 @@ from cirujanos.models import ConfigParam
 from cirujanos.apps.media.extensions import Publication
 from cirujanos.tests.support.integration import IntegrationTestCase
 from django.utils.translation import ugettext as _
-from ..support import factories as f
+from ...support import factories as f
 from datetime import datetime, timedelta
 
 

@@ -9,7 +9,7 @@ from views import (
     SlideView,
     VideoView,
 )
-from models import Article, Video, Event, Slide
+# from models import Article, Video, Event, Slide
 
 urlpatterns = patterns(
     '',
@@ -25,30 +25,16 @@ urlpatterns = patterns(
         name='download'),
 )
 
-if Article.isAchievedByYear():
-    urlpatterns += patterns(
-        '',
-        url(r'^articles/(?P<publish_year>\d{4})/$',
-            ArticleView.as_view(), name="articles"),
-    )
+# if Article.isAchievedByYear():
+urlpatterns += patterns(
+    '',
+    url(r'^articles/(?P<publish_year>\d{4})/$',
+        ArticleView.as_view(), name="articles_year"),
+)
 
-if Video.isAchievedByYear():
-    urlpatterns += patterns(
-        '',
-        url(r'^videos/(?P<publish_year>\d{4})/$',
-            VideoView.as_view(), name="videos"),
-    )
-
-if Event.isAchievedByYear():
-    urlpatterns += patterns(
-        '',
-        url(r'^events/(?P<publish_year>\d{4})/$',
-            EventView.as_view(), name="events"),
-    )
-
-if Slide.isAchievedByYear():
-    urlpatterns += patterns(
-        '',
-        url(r'^slides/(?P<publish_year>\d{4})/$',
-            SlideView.as_view(), name="slides"),
-    )
+# if Video.isAchievedByYear():
+urlpatterns += patterns(
+    '',
+    url(r'^videos/(?P<publish_year>\d{4})/$',
+        VideoView.as_view(), name="videos_year"),
+)

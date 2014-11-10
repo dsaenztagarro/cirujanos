@@ -1,13 +1,13 @@
 from cirujanos.tests.support.integration import DownloadTestCase
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
-from ..support import factories
+from ..support import factories as f
 
 
 class PathologyArticlesTestCase(DownloadTestCase):
 
     def setUp(self):
-        self.pathology_list = factories.PathologyFactory. \
+        self.pathology_list = f.PathologyFactory. \
             create_batch(3, references__articles_count=2)
         self.pathology = self.pathology_list.pop(0)
         self.pathology_articles = self.pathology.articles.all()

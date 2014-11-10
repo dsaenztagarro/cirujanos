@@ -25,6 +25,8 @@
                 <a href="{{ post.link }}">
                   {% if post.is_system %}
                   <img src="{{ post.system_image_path }}" alt="" class="img-responsive">
+                  {% else %}
+                  <img src="{{ post.image.url }}" alt="" class="img-responsive">
                   {% endif %}
                 </a>
               </div>

@@ -7,5 +7,5 @@ class VideoTestCase(TestCase):
     def setUp(self):
         self.video = f.VideoFactory.create()
 
-    def test_show_unicode_representation(self):
+    def test_display_object_in_django_admin(self):
         self.assertEqual(self.video.__str__(), self.video.title)

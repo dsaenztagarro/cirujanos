@@ -17,7 +17,7 @@ manage.py syncdb
 manage.py migrate
 ```
 
-# Running tests locally
+## Running tests locally ##
 
 ```
 coverage run --source='.' manage.py test cirujanos --liverserver=0.0.0.0:8081 --settings=config.settings.testing

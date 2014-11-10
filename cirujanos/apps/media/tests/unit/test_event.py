@@ -7,5 +7,5 @@ class EventTestCase(TestCase):
     def setUp(self):
         self.event = f.EventFactory.create()
 
-    def test_show_unicode_representation(self):
+    def test_display_object_in_django_admin(self):
         self.assertEqual(self.event.__str__(), self.event.title)

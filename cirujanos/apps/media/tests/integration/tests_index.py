@@ -1,8 +1,8 @@
-from cirujanos.tests.support.integration import IntegrationTestCase
+from cirujanos.tests.support.integration import SeleniumTestCase
 from django.utils.translation import ugettext as _
 
 
-class MediaIndexTest(IntegrationTestCase):
+class MediaIndexTest(SeleniumTestCase):
 
     def test_visit_articles(self):
         self.driver.get(self.url_for('media:index'))

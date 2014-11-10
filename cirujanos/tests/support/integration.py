@@ -5,7 +5,7 @@ from selenium import webdriver
 import os
 
 
-class IntegrationTestCase(LiveServerTestCase):
+class SeleniumTestCase(LiveServerTestCase):
 
     @classmethod
     def browser_profile(cls):
@@ -27,18 +27,18 @@ class IntegrationTestCase(LiveServerTestCase):
             browser_profile=cls.browser_profile(),
         )
         cls.driver.implicitly_wait(20)
-        super(IntegrationTestCase, cls).setUpClass()
+        super(SeleniumTestCase, cls).setUpClass()
 
     @classmethod
     def tearDownClass(cls):
         cls.driver.quit()
-        super(IntegrationTestCase, cls).tearDownClass()
+        super(SeleniumTestCase, cls).tearDownClass()
 
     def url_for(self, path):
         return '%s%s' % (self.live_server_url, reverse(path))
 
 
-class DownloadTestCase(IntegrationTestCase):
+class DownloadTestCase(SeleniumTestCase):
 
     @classmethod
     def browser_profile(cls):

@@ -1,15 +1,6 @@
 from django.conf.urls import patterns, url
-from views import (
-    ArticleView,
-    DisplayVideoView,
-    EventView,
-    MediaBrowserView,
-    MediaDownloadView,
-    MultimediaView,
-    SlideView,
-    VideoView,
-)
-# from models import Article, Video, Event, Slide
+from views import ArticleView, DisplayVideoView, EventView, MediaBrowserView, \
+    MultimediaView, SlideView, VideoView
 
 urlpatterns = patterns(
     '',
@@ -21,18 +12,16 @@ urlpatterns = patterns(
     url(r'^videos/(?P<video_id>\d)/$', DisplayVideoView.as_view(),
         name="video-display"),
     url(r'^browser/(?P<path>.*)$', MediaBrowserView.as_view(), name='browser'),
-    url(r'^download/(?P<path>.*)$', MediaDownloadView.as_view(),
-        name='download'),
+    # url(r'^download/(?P<path>.*)$', MediaDownloadView.as_view(),
+    #     name='download'),
 )
 
-# if Article.isAchievedByYear():
 urlpatterns += patterns(
     '',
     url(r'^articles/(?P<publish_year>\d{4})/$',
         ArticleView.as_view(), name="articles_year"),
 )
 
-# if Video.isAchievedByYear():
 urlpatterns += patterns(
     '',
     url(r'^videos/(?P<publish_year>\d{4})/$',

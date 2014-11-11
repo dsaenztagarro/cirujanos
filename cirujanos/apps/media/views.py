@@ -44,7 +44,6 @@ class MediaBrowserView(View):
             response['Content-Disposition'] = 'inline; filename="%s"' % \
                 smart_str(os.path.basename(file_path))
             return response
-        pdf.closed
 
     def __get_file_path(self, params):
         document_root = settings.MEDIA_ROOT
@@ -58,20 +57,21 @@ class MediaBrowserView(View):
         else:
             return None
 
-
-class MediaDownloadView(View):
-    """
-    Downloads to the browser client the media file
-    """
-    def get(self, request, *args, **kwargs):
-        document_root = settings.MEDIA_ROOT
-        file_path = smart_str(os.path.join(document_root, kwargs['path']))
-        response = HttpResponse(mimetype='application/force-download')
-        response['Content-Length'] = os.path.getsize(file_path)
-        response['Content-Disposition'] = 'attachment; filename="%s"' % \
-            smart_str(os.path.basename(file_path))
-        response['X-Sendfile'] = file_path
-        return response
+# Uncomment if it is used
+#
+# class MediaDownloadView(View):
+#     """
+#     Downloads to the browser client the media file
+#     """
+#     def get(self, request, *args, **kwargs):
+#         document_root = settings.MEDIA_ROOT
+#         file_path = smart_str(os.path.join(document_root, kwargs['path']))
+#         response = HttpResponse(mimetype='application/force-download')
+#         response['Content-Length'] = os.path.getsize(file_path)
+#         response['Content-Disposition'] = 'attachment; filename="%s"' % \
+#             smart_str(os.path.basename(file_path))
+#         response['X-Sendfile'] = file_path
+#         return response
 
 
 class ArticleView(MediaGalleryView):

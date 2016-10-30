@@ -4,8 +4,8 @@ python:
 env:
   - DJANGO=1.6 DB=mysql
 install:
-  - pip install -q Django==$DJANGO --use-mirrors
-  - pip install -r requirements-devel.txt --use-mirrors
+  - pip install -q Django==$DJANGO
+  - pip install -r requirements-devel.txt
 before_script:
   - mysql -e 'create database cirujanos_development;'
 script:

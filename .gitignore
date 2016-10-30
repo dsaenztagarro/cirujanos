@@ -10,3 +10,9 @@ node_modules/
 CACHE
 static_media/
 cirujanos/static/js/bower/*
+
+# Virtualenv
+bin/
+include/
+lib/
+.Python

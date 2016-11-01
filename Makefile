@@ -8,6 +8,12 @@ SSL_INCLUDE  = -I/usr/local/opt/openssl/include -L/usr/local/opt/openssl/lib
 
 CFLAGS = $(TK_INCLUDE) $(ZLIB_INCLUDE) $(SSL_INCLUDE)
 
+VIRTUALENV = $(HOME)/Code/Python/Virtualenvs/cirujanos/bin/activate
+
 install:
-	CFLAGS="$(CFLAGS)" pip install -r requirements-devel.txt --ignore-installed
+	CFLAGS="$(CFLAGS)" pip install -r requirements.txt --ignore-installed
+
+upgrade:
+	CFLAGS="$(CFLAGS)" pip install -r requirements.txt --upgrade
+	pip freeze > requirements.txt
 

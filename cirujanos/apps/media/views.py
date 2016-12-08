@@ -1,12 +1,16 @@
 # -*- encoding: utf-8 -*-
-from cirujanos.views import AppTemplateView
+import os
 from django.conf import settings
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from django.utils.encoding import smart_str
 from django.views.generic import View
-import models
-import os
+from cirujanos.views import AppTemplateView
+from cirujanos.apps.media.models import (
+    Article,
+    Event,
+    Slide,
+    Video)
 
 
 class MediaGalleryView(AppTemplateView):
@@ -79,7 +83,7 @@ class ArticleView(MediaGalleryView):
     Shows a list of all published articles
     """
     template_name = 'media/article/index.html'
-    model_klass = models.Article
+    model_klass = Article
 
 
 class MultimediaView(AppTemplateView):
@@ -88,17 +92,17 @@ class MultimediaView(AppTemplateView):
 
 class VideoView(MediaGalleryView):
     template_name = 'media/video/index.html'
-    model_klass = models.Video
+    model_klass = Video
 
 
 class EventView(MediaGalleryView):
     template_name = 'media/event/index.html'
-    model_klass = models.Event
+    model_klass = Event
 
 
 class SlideView(MediaGalleryView):
     template_name = 'media/slide/index.html'
-    model_klass = models.Slide
+    model_klass = Slide
 
 
 class DisplayVideoView(AppTemplateView):
@@ -107,7 +111,7 @@ class DisplayVideoView(AppTemplateView):
     def get(self, request, *args, **kwargs):
         context = self.get_context_data(**kwargs)
 
-        video = get_object_or_404(models.Video, pk=context['video_id'])
+        video = get_object_or_404(Video, pk=context['video_id'])
         context['video'] = video
 
         return self.render_to_response(context)

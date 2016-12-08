@@ -3,7 +3,7 @@ from django.db import models
 from django.template.defaultfilters import slugify
 from django.utils.translation import ugettext_lazy as _
 from tinymce.models import HTMLField
-from managers import MenuManager, PathologyArticleManager, \
+from .managers import MenuManager, PathologyArticleManager, \
     PathologyVideoManager, ProcedureArticleManager, ProcedureVideoManager
 from cirujanos.apps.media.models import Article, Video
 

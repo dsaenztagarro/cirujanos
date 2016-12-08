@@ -2,7 +2,7 @@ from django.core.mail import EmailMultiAlternatives
 from django.conf import settings
 from django.template.loader import get_template
 from django.template import Context
-from models import NotificationEmail
+from cirujanos.apps.about.models import NotificationEmail
 
 
 class ContactEmailDispatcher(object):

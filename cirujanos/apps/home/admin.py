@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Slider, Post
+from cirujanos.apps.home.models import Slider, Post
 
 
 class SliderAdmin(admin.ModelAdmin):

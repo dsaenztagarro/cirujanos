@@ -5,8 +5,8 @@ from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from django.utils.translation import ugettext as _
 from django.views.generic.edit import FormView
-from forms import ContactForm
-from models import Doctor
+from cirujanos.apps.about.forms import ContactForm
+from cirujanos.apps.about.models import Doctor
 import json
 
 

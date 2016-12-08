@@ -1,8 +1,8 @@
 from django.contrib import admin
-import models
+from .models import ConfigParam
 
 
 class ConfigParamAdmin(admin.ModelAdmin):
-    model = models.ConfigParam
+    model = ConfigParam
 
-admin.site.register(models.ConfigParam, ConfigParamAdmin)
+admin.site.register(ConfigParam, ConfigParamAdmin)

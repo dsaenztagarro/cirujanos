@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 from cirujanos.views import AppTemplateView
-from .models import Slider, Post
+from cirujanos.apps.home.models import Slider, Post
 
 
 class HomeView(AppTemplateView):

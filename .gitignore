@@ -12,7 +12,5 @@ static_media/
 cirujanos/static/js/bower/*
 
 # Virtualenv
-bin/
-include/
-lib/
+venv/
 .Python

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Article, Video, Slide, Event
+from .models import Article, Video, Slide, Event
 
 
 class AdminArticle(admin.ModelAdmin):

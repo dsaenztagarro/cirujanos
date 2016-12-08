@@ -5,6 +5,12 @@
 
 ## Setup development environment ##
 
+Checking Django version installed
+
+```
+python -m django --version
+```
+
 Just execute these commands in your virtualenv(wrapper):
 
 ```shell

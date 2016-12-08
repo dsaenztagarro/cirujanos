@@ -1,6 +1,6 @@
 from django.shortcuts import render_to_response
 from django.views.generic import DetailView, TemplateView
-from mixins import HeaderContextMixin
+from .mixins import HeaderContextMixin
 
 
 class AppTemplateView(HeaderContextMixin, TemplateView):

@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 from django import forms
-from core import ContactEmailDispatcher
+from cirujanos.apps.about.core import ContactEmailDispatcher
 
 
 class ContactForm(forms.Form):

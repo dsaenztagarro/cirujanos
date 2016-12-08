@@ -12,9 +12,6 @@ django-selenium==0.9.8
 django-tinymce==2.4.0
 docopt==0.6.2
 enum34==1.1.6
-fabric-utils==0.0.3
-factory-boy==2.7.0
-fake-factory==0.7.2
 funcsigs==1.0.2
 idna==2.1
 ipaddress==1.0.17

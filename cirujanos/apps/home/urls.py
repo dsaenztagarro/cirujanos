@@ -1,7 +1,6 @@
-from django.conf.urls import patterns, url
-from .views import HomeView
+from django.conf.urls import url
+from cirujanos.apps.home.views import HomeView
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     url(r'^$', HomeView.as_view(), name="index"),
-)
+]

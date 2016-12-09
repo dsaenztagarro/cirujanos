@@ -3,6 +3,39 @@
 [![Build Status](https://travis-ci.org/dsaenztagarro/cirujanos.svg?branch=master)](https://travis-ci.org/dsaenztagarro/cirujanos)
 [![Coverage Status](https://coveralls.io/repos/dsaenztagarro/cirujanos/badge.png?branch=master)](https://coveralls.io/r/dsaenztagarro/cirujanos?branch=master)
 
+## Deploy with Apache mod_wsgi
+
+Check `Vagrantfile` for packages to be installed in Ubuntu machine.
+
+As sudo:
+
+```
+mkdir -p /var/www/cirujanos
+chown -R cirujanos:www-data /var/www/cirujanos
+```
+
+Before setup:
+
+```
+cd /var/www/cirujanos
+git clone -b <branch-name> <git-repository> .
+virtualenv -p /usr/bin/python3.5 venv
+source venv/bin/activate
+```
+
+Setup:
+
+```
+cd /var/www/cirujanos
+make setup
+cp -f examples/apache2/sites-available/cirujanos /etc/apache2/sites-available/cirujanos
+```
+
+### References
+
+- [How to use Django with Apache and mod_wsgi](https://docs.djangoproject.com/es/1.10/howto/deployment/wsgi/modwsgi/)
+- [mod_wsgi](https://modwsgi.readthedocs.io/en/develop/index.html)
+
 ## Setup development environment ##
 
 Checking Django version installed
@@ -31,9 +64,3 @@ coverage run --source='.' manage.py test cirujanos --liverserver=0.0.0.0:8081 --
 coverage html --include="cirujanos/*"
 coverage report
 ```
-
-## Pending tasks
-
-- [ ] Lettuce
-- [ ] Documentation
-- [ ] 100% coverage

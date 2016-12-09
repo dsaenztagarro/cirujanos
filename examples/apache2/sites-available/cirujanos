@@ -4,7 +4,7 @@
     ServerAlias www.cirujanostoracicos.es
     WSGIDaemonProcess cirujanostoracicos.es python-path=/var/www/cirujanos:/var/www/cirujanos/venv/lib/python3.5/site-packages
     WSGIProcessGroup cirujanostoracicos.es
-    WSGIScriptAlias / "/var/www/cirujanos/cirujanos.wsgi"
+    WSGIScriptAlias / "/var/www/cirujanos/cirujanos/wsgi.py"
     Alias /static /var/www/cirujanos/static/
     <Directory /var/www/cirujanos/static/>
       Options FollowSymLinks

@@ -2,7 +2,7 @@
 <VirtualHost *:80>
     ServerName cirujanostoracicos.es
     ServerAlias www.cirujanostoracicos.es
-    WSGIDaemonProcess cirujanostoracicos.es
+    WSGIDaemonProcess cirujanostoracicos.es python-path=/var/www/cirujanos:/var/www/cirujanos/venv/lib/python3.5/site-packages
     WSGIProcessGroup cirujanostoracicos.es
     WSGIScriptAlias / "/var/www/cirujanos/cirujanos.wsgi"
     Alias /static /var/www/cirujanos/static/

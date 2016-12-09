@@ -1,5 +1,7 @@
 .PHONY: setup
 
+DJANGO_ENV = local
+
 PYTHON_INTERPRETER = /usr/local/bin/python3.5
 
 UNAME := $(shell uname)
@@ -19,22 +21,22 @@ ifeq ($(UNAME), Darwin)
 
 endif
 
+PIP = LDFLAGS="$(LDFLAGS)" CFLAGS="$(CFLAGS)" pip install --ignore-installed -r
+
 setup:
-	virtualenv -p $(PYTHON_INTERPRETER) venv
+	$(PIP) requirements.txt
+	bower install --production
+
+setup-dev:
+	$(PIP) requirements-dev.txt
+	bower install
 
 runserver:
-	python manage.py runserver --settings=config.settings.local
+	python manage.py runserver --settings=config.settings.$(DJANGO_ENV)
 
 syncr:
 	pip freeze > requirements.txt
 
-install:
-	LDFLAGS="$(LDFLAGS)" CFLAGS="$(CFLAGS)" pip install -r requirements.txt --ignore-installed
-
 install_fabric:
 	CFLAGS="$(CFLAGS_FABRIC)" LDFLAGS="$(LDFLAGS_FABRIC)" pip install -r requirements_fabric.txt --ignore-installed
-
-upgrade:
-	CFLAGS="$(CFLAGS)" pip install -r requirements.txt --upgrade
-	pip freeze > requirements.txt
 

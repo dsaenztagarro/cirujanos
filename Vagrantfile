@@ -66,6 +66,17 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
+    apt-get install -y python3
+    apt-get install -y python3-dev
     apt-get install -y mysql-server-5.5
+    apt-get install -y libmysqlclient-dev
+    apt-get install -y libssl-dev
+    apt-get install nodejs
+    apt-get install npm
+    npm install -g bower
+    apt-get install nodejs-legacy
+    mkdir -p /var/www/
+    ln -s /vagrant /var/www/cirujanos
+    chown -R vagrant:www-data /var/www/cirujanos
   SHELL
 end

@@ -1,19 +1,16 @@
 syntax:glob
-node_modules/
 .coverage
-*.pyc
 *.mo
-*.ropeproject/
-.DS_Store
 .vagrant
-^tags$
-CACHE
-static_media/
 cirujanos/static/js/bower/*
 
 # Virtualenv
 venv/
 .Python
+*.pyc
 
-# Apache config
+# Release
+static
+media
 cirujanos/wsgi.py
+node_modules/

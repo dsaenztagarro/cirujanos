@@ -14,3 +14,10 @@ DATABASES = {
 
 STATIC_ROOT = '/tmp/static'
 MEDIA_ROOT = '/tmp/media'
+
+COMPRESS_ROOT = STATIC_ROOT
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = True
+COMPRESS_PRECOMPILERS = (
+    ('text/coffeescript', 'coffee --compile --stdio'),
+)

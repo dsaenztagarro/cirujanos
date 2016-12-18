@@ -3,8 +3,8 @@ import os
 import sys
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "DJANGO_SETTINGS_MODULE_VAR")
-    os.environ.setdefault("CIRUJANOS_SECRET_KEY", "CIRUJANOS_SECRET_KEY_VAR")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.production")
+    os.environ.setdefault("CIRUJANOS_SECRET_KEY", "toF4FVDMB7EQMeGE3xLgLdf9pKMG")
     try:
         from django.core.management import execute_from_command_line
     except ImportError:

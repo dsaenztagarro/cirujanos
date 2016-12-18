@@ -26,6 +26,9 @@ PIP = LDFLAGS="$(LDFLAGS)" CFLAGS="$(CFLAGS)" pip install --ignore-installed -r
 setup:
 	$(PIP) requirements.txt
 	bower install --production
+	python manage.py collectstatic <<< yes
+	python manage.py compress
+	django-admin compilemessages
 
 setup-dev:
 	$(PIP) requirements-dev.txt

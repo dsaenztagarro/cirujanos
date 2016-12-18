@@ -23,12 +23,17 @@ virtualenv -p /usr/bin/python3.5 venv
 source venv/bin/activate
 ```
 
+Copy the script bin/setup_apache.sh and fill the gaps.
+
 Setup:
 
 ```
+./bin/setup_apache.sh
 cd /var/www/cirujanos
 make setup
-cp -f examples/apache2/sites-available/cirujanos /etc/apache2/sites-available/cirujanos
+cp -f examples/apache2/sites-available/cirujanos.conf /etc/apache2/sites-available/
+make setup
+a2ensite cirujanos.conf
 ```
 
 ### References
@@ -36,7 +41,7 @@ cp -f examples/apache2/sites-available/cirujanos /etc/apache2/sites-available/ci
 - [How to use Django with Apache and mod_wsgi](https://docs.djangoproject.com/es/1.10/howto/deployment/wsgi/modwsgi/)
 - [mod_wsgi](https://modwsgi.readthedocs.io/en/develop/index.html)
 
-## Setup development environment ##
+## Setup development environment (under review)
 
 Checking Django version installed
 

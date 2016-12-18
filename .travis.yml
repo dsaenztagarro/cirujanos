@@ -8,6 +8,10 @@ install:
   - pip install -r requirements-devel.txt
 before_script:
   - mysql -e 'create database cirujanos_development;'
+  - ./bin/setup_travis.sh
+  - python manage.py collectstatic <<< yes
+  - python manage.py compress
+  - django-admin compilemessages
 script:
   coverage run -m py.test -v --tb=native
 after_success:

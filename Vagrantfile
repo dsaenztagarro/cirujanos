@@ -71,6 +71,7 @@ Vagrant.configure("2") do |config|
     apt-get install -y mysql-server-5.5
     apt-get install -y libmysqlclient-dev
     apt-get install -y libssl-dev
+    apt-get install gettext
     apt-get install nodejs
     apt-get install npm
     npm install -g bower

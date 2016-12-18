@@ -1,23 +1,15 @@
 # vim: set filetype=python:
+
+# See script bin/setup_apache.sh
+
 import os
-# import sys
-# import site
 
-# project_dir = '/home/cirujanos/apps/cirujanos/releases/current/'
-# pythonenv_dir = '/var/www/cirujanos/env'
+os.environ['CIRUJANOS_SECRET_KEY'] = 'CIRUJANOS_SECRET_KEY_VAR'
+os.environ['CIRUJANOS_DB']         = 'CIRUJANOS_DB_VAR'
+os.environ['CIRUJANOS_USER']       = 'CIRUJANOS_USER_VAR'
+os.environ['CIRUJANOS_PASSWORD']   = 'CIRUJANOS_PASSWORD_VAR'
 
-# Add the site-packages of the chosen virtualenv to work with
-# site.addsitedir(pythonenv_dir + '/lib/python2.7/site-packages')
+os.environ['DJANGO_SETTINGS_MODULE'] = 'DJANGO_SETTINGS_MODULE_VAR'
 
-# Add the app's directory to the PYTHONPATH
-# sys.path.append(os.path.expandvars(project_dir))
-# sys.path.append(os.path.expandvars(project_dir + 'cirujanos'))
-
-os.environ['DJANGO_SETTINGS_MODULE'] = 'config.settings.production'
-
-# Activate your virtual env
-# activate_this = pythonenv_dir + "/bin/activate_this.py"
-# execfile(activate_this, dict(__file__=activate_this))
-
-import django.core.handlers.wsgi
-application = django.core.handlers.wsgi.WSGIHandler()
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()

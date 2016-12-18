@@ -14,3 +14,6 @@ cirujanos/static/js/bower/*
 # Virtualenv
 venv/
 .Python
+
+# Apache config
+cirujanos/wsgi.py

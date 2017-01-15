@@ -64,20 +64,35 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
+  # apt-get install nodejs-legacy
+
+  #     export DEBIAN_FRONTEND=noninteractive
   config.vm.provision "shell", inline: <<-SHELL
+    export LANGUAGE=en_US.UTF-8
+    export LANG=en_US.UTF-8
+    export LC_ALL=en_US.UTF-8
+    locale-gen en_US.UTF-8
+    dpkg-reconfigure locales
     apt-get update
-    apt-get install -y python3
-    apt-get install -y python3-dev
+    apt-get install -y apache2
+    apt-get install -y vim
+    apt-get install -y python3 python3-dev python-pip python-virtualenv
+    debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
+    debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
     apt-get install -y mysql-server-5.5
     apt-get install -y libmysqlclient-dev
     apt-get install -y libssl-dev
-    apt-get install gettext
-    apt-get install nodejs
-    apt-get install npm
-    npm install -g bower
-    apt-get install nodejs-legacy
+    apt-get install -y gettext
+    apt-get install -y curl
+    apt-get install build-essential libssl-dev
     mkdir -p /var/www/
-    ln -s /vagrant /var/www/cirujanos
+    ln -sf /vagrant /var/www/cirujanos
     chown -R vagrant:www-data /var/www/cirujanos
+  SHELL
+
+  config.vm.provision "shell", privileged: false, inline: <<-SHELL
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+    nvm install default
+    npm install -g bower
   SHELL
 end

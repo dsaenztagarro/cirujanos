@@ -1,13 +1,17 @@
 -r requirements.txt
 
-factory-boy==2.4.1
-fake-factory==0.4.2
-mock==1.0.1
-py==1.4.24
-pytest==2.6.2
-pytest-django==2.6.2
-pytest-pythonpath==0.3
-selenium==2.43.0
-
-coverage==3.7.1
-coveralls==0.4.4
+coverage==4.2
+coveralls==1.1
+docopt==0.6.2
+factory-boy==2.7.0
+fake-factory==0.7.2
+mock==2.0.0
+pbr==1.10.0
+py==1.4.31
+pytest==3.0.5
+pytest-django==3.1.2
+pytest-pythonpath==0.7.1
+python-dateutil==2.6.0
+requests==2.12.3
+selenium==3.0.2
+six==1.10.0

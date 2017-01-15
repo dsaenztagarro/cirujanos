@@ -1,12 +1,11 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 from django.contrib import admin
 from django.http import HttpResponseRedirect
 from django.views.generic import TemplateView
 from . import views
 admin.autodiscover()
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     # url(r'^$', TemplateView.as_view(template_name='coming-soon.html')),
     url(r'^$', lambda r: HttpResponseRedirect('home/')),
     url(r'^home/', include('cirujanos.apps.home.urls', namespace="home")),
@@ -22,7 +21,7 @@ urlpatterns = patterns(
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
-)
+]
 
 # from django.conf import settings
 # if settings.DEBUG:

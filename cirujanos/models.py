@@ -1,4 +1,3 @@
-from django.contrib.contenttypes import generic
 from django.contrib.contenttypes.models import ContentType
 from django.core.validators import MaxLengthValidator
 from django.db import models

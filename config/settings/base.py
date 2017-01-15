@@ -15,7 +15,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cirujanos_development',
+        'NAME': 'cirujanos_production',
         'USER': 'development',
         'PASSWORD': 'development',
         'HOST': '',
@@ -109,8 +109,8 @@ ROOT_URLCONF = 'cirujanos.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'cirujanos.wsgi.application'
 
-TEMPLATE_DIRS = (
-)
+# TEMPLATE_DIRS = (
+# )
 
 EXTERNAL_APPS = [
     'django.contrib.auth',
@@ -124,7 +124,6 @@ EXTERNAL_APPS = [
     # 'django.contrib.admindocs',
     'django_extensions',
     # 'django_nose',
-    'south',
     'compressor',
     'tinymce',
 ]
@@ -138,6 +137,22 @@ INTERNAL_APPS = [
 ]
 
 INSTALLED_APPS = EXTERNAL_APPS + INTERNAL_APPS
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 
 # A sample logging configuration. The only tangible logging

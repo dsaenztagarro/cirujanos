@@ -2,11 +2,14 @@
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from django.views.generic import View
-from models import  \
-    Pathology, PathologyArticle, PathologyVideo, \
-    Procedure, ProcedureArticle, ProcedureVideo
+from cirujanos.apps.web.models import (
+    Pathology,
+    PathologyArticle,
+    PathologyVideo,
+    Procedure,
+    ProcedureArticle,
+    ProcedureVideo)
 from cirujanos.views import AppDetailView
-
 
 class PathologyIndexView(View):
     def get(self, request):

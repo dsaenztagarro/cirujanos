@@ -1,10 +1,10 @@
+import datetime
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-import extensions as ext
-import datetime
+from cirujanos.apps.media.extensions import Publication
 
 
-class Article(models.Model, ext.Publication):
+class Article(models.Model, Publication):
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=250)
     description = models.TextField(max_length=1000)
@@ -21,7 +21,7 @@ class Article(models.Model, ext.Publication):
         verbose_name_plural = _('articles')
 
 
-class Video(models.Model, ext.Publication):
+class Video(models.Model, Publication):
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=250)
     description = models.CharField(max_length=1000)
@@ -38,7 +38,7 @@ class Video(models.Model, ext.Publication):
         verbose_name_plural = _('videos')
 
 
-class Slide(models.Model, ext.Publication):
+class Slide(models.Model, Publication):
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=250)
     description = models.CharField(max_length=1000)
@@ -55,7 +55,7 @@ class Slide(models.Model, ext.Publication):
         verbose_name_plural = _('slides')
 
 
-class Event(models.Model, ext.Publication):
+class Event(models.Model, Publication):
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=250)
     description = models.CharField(max_length=1000)

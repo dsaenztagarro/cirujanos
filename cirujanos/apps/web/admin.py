@@ -1,14 +1,20 @@
 from django.contrib import admin
-import models
+from .models import (
+    Pathology,
+    PathologyVideo,
+    Procedure,
+    ProcedureArticle,
+    ProcedureVideo,
+    PathologyArticle)
 
 
 class PathologyArticleInline(admin.TabularInline):
-    model = models.PathologyArticle
+    model = PathologyArticle
     extra = 1
 
 
 class PathologyVideoInline(admin.TabularInline):
-    model = models.PathologyVideo
+    model = PathologyVideo
     extra = 1
 
 
@@ -20,12 +26,12 @@ class PathologyAdmin(admin.ModelAdmin):
 
 
 class ProcedureArticleInline(admin.TabularInline):
-    model = models.ProcedureArticle
+    model = ProcedureArticle
     extra = 1
 
 
 class ProcedureVideoInline(admin.TabularInline):
-    model = models.ProcedureVideo
+    model = ProcedureVideo
     extra = 1
 
 
@@ -36,5 +42,5 @@ class ProcedureAdmin(admin.ModelAdmin):
     ordering = ('order',)
 
 
-admin.site.register(models.Pathology, PathologyAdmin)
-admin.site.register(models.Procedure, ProcedureAdmin)
+admin.site.register(Pathology, PathologyAdmin)
+admin.site.register(Procedure, ProcedureAdmin)

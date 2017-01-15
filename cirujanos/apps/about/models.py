@@ -2,6 +2,17 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from tinymce.models import HTMLField
 
+class Location(models.Model):
+    name = models.CharField(max_length=50)
+    address = models.CharField(max_length=250)
+    latitude = models.CharField(max_length=20)
+    longitude = models.CharField(max_length=20)
+
+    class Meta:
+        app_label = 'about'
+        verbose_name = _('about.location')
+        verbose_name_plural = _('about.locations')
+
 
 class DoctorDecorator():
     def image_path(self):

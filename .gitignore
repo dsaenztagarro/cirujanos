@@ -12,5 +12,6 @@ venv/
 # Release
 static
 media
+manage.py
 cirujanos/wsgi.py
 node_modules/

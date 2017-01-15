@@ -17,6 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgid "about.location"
+msgstr "Localización"
+
+msgid "about.locations"
+msgstr "Localizaciones"
 
 msgid "doctor"
 msgstr "Doctor"

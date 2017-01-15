@@ -28,6 +28,12 @@ class ContactFormView(HeaderContextMixin, BackboneFormAdapterMixin, FormView):
     form_class = ContactForm
     success_url = '/thanks/'
 
+    def get_context_data(self, **kwargs):
+        context = super(ContactFormView, self).get_context_data(**kwargs)
+        import pdb; pdb.set_trace()
+        context.update({"location": Location.objects.first()})
+        return self.decorate_context(context)
+
     def post(self, request, *args, **kwargs):
         """
         Handles POST requests, instantiating a form instance with the passed

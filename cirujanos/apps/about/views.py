@@ -6,7 +6,7 @@ from django.shortcuts import get_object_or_404
 from django.utils.translation import ugettext as _
 from django.views.generic.edit import FormView
 from cirujanos.apps.about.forms import ContactForm
-from cirujanos.apps.about.models import Doctor
+from cirujanos.apps.about.models import Doctor, Location
 import json
 
 
@@ -30,7 +30,6 @@ class ContactFormView(HeaderContextMixin, BackboneFormAdapterMixin, FormView):
 
     def get_context_data(self, **kwargs):
         context = super(ContactFormView, self).get_context_data(**kwargs)
-        import pdb; pdb.set_trace()
         context.update({"location": Location.objects.first()})
         return self.decorate_context(context)
 

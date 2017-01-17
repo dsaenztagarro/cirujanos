@@ -3,10 +3,10 @@ from django.utils.translation import ugettext_lazy as _
 from tinymce.models import HTMLField
 
 class Location(models.Model):
-    name = models.CharField(max_length=50)
-    address = models.CharField(max_length=250)
-    latitude = models.CharField(max_length=20)
-    longitude = models.CharField(max_length=20)
+    name      = models.CharField(max_length = 50,  default = None)
+    address   = models.CharField(max_length = 250, default = None)
+    latitude  = models.CharField(max_length = 20,  default = None)
+    longitude = models.CharField(max_length = 20,  default = None)
 
     class Meta:
         app_label = 'about'
@@ -23,10 +23,10 @@ class DoctorDecorator():
 
 
 class Doctor(DoctorDecorator, models.Model):
-    code = models.CharField(max_length=10)
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=100)
-    job = models.CharField(max_length=300)
+    code       = models.CharField(max_length = 10)
+    first_name = models.CharField(max_length = 50)
+    last_name  = models.CharField(max_length = 100)
+    job        = models.CharField(max_length = 300)
 
     def __unicode__(self):
         return "%s %s" % (self.first_name, self.last_name)

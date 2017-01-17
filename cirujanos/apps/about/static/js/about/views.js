@@ -181,7 +181,9 @@
   Views.GoogleMapsView = Backbone.View.extend({
     el: "#map_canvas",
     initialize: function() {
-      this.myLatlng = new google.maps.LatLng(42.233904,-8.708916);
+      var latitude  = $("#location_latitude").val();
+      var longitude = $("#location_longitude").val();
+      this.myLatlng = new google.maps.LatLng(latitude, longitude);
       this.showMap();
       this.showMarker();
       this.addListener();

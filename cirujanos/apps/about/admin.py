@@ -1,6 +1,16 @@
 from django.contrib import admin
-from .models import Doctor, DoctorContent, DoctorContentType, \
+from .models import (
+    Doctor,
+    DoctorContent,
+    DoctorContentType,
+    Location,
     NotificationEmail
+)
+
+
+class AdminLocation(admin.ModelAdmin):
+    list_display = ('name', 'address')
+    list_display_links = ('name',)
 
 
 class AdminDoctor(admin.ModelAdmin):
@@ -20,6 +30,7 @@ class AdminNotificationEmail(admin.ModelAdmin):
     list_display = ('email',)
 
 
+admin.site.register(Location, AdminLocation)
 admin.site.register(Doctor, AdminDoctor)
 admin.site.register(DoctorContent, AdminDoctorContent)
 admin.site.register(DoctorContentType, AdminDoctorContentType)
